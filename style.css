@@ -2,3 +2,48 @@ header, main, footer {
     margin: 20px;
     border: 1px solid black;
 }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.imageContainer {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.imageContainer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.menu {
+    width: 75%;
+    height: 100%;
+}
+
+.menu ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.languageFlagContainer {
+    margin: 5px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+}
+
+.languageFlagContainer img {
+    max-width: 100%;
+    height: auto;
+}

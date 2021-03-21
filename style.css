@@ -1,6 +1,19 @@
+/* 
+    Title, subtitles: white/
+    background: black, dark gray
+    text: white
+    https://www.rit.edu/
+    Helvetica Neue (?), Helvetica, Roboto
+*/
+* {
+    color: #FF4500;
+    background-color: #444444;
+    font-family: "Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
+}
+
 header, main, main div , footer {
     margin: 20px;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 header, main div, footer div{
@@ -32,7 +45,7 @@ header .languageFlagContainer {
     margin: 5px;
     width: 25px;
     height: 25px;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 header .languageFlagContainer a img {
@@ -44,7 +57,7 @@ header .headerImageContainer {
     margin: 5px;
     width: 50px;
     height: 50px;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 50%;
 }
 
@@ -52,7 +65,7 @@ main #chisono .imageChiSonoContainer {
     margin: 5px;
     width: 200px;
     height: 250px;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 main #chisono .imageChiSonoContainer img {
@@ -66,3 +79,26 @@ main #chisono .chiSonoSummaryContainer {
     display: block;
 }
 
+main #hardSkills div {
+    margin: 5px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+}
+
+main #hardSkills div:hover {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+}
+
+main #hardSkills div a img {
+    max-width: 100%;
+    height: auto;
+}
+
+main #hardSkills div a img:hover {
+    max-width: 100%;
+    height: auto;
+}

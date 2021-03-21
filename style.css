@@ -1,16 +1,46 @@
-header, main, footer {
+header, main, main div , footer {
     margin: 20px;
     border: 1px solid black;
 }
 
-header {
+header, main div, footer div{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
 }
 
-.imageContainer {
+header .headerImageContainer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+header .menu {
+    width: 75%;
+    height: 100%;
+}
+
+header .menu ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .languageFlagContainer {
+    margin: 5px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+}
+
+header .languageFlagContainer a img {
+    max-width: 100%;
+    height: auto;
+}
+
+header .headerImageContainer {
     margin: 5px;
     width: 50px;
     height: 50px;
@@ -18,32 +48,21 @@ header {
     border-radius: 50%;
 }
 
-.imageContainer img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
-.menu {
-    width: 75%;
-    height: 100%;
-}
-
-.menu ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-.languageFlagContainer {
+main #chisono .imageChiSonoContainer {
     margin: 5px;
-    width: 25px;
-    height: 25px;
+    width: 200px;
+    height: 250px;
     border: 1px solid black;
 }
 
-.languageFlagContainer img {
+main #chisono .imageChiSonoContainer img {
     max-width: 100%;
     height: auto;
 }
+
+main #chisono .chiSonoSummaryContainer {
+    width: 100%;
+    height: 30vh;
+    display: block;
+}
+

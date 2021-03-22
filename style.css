@@ -11,16 +11,21 @@
     font-family: "Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
 }
 
-header, main, main div , footer {
-    margin: 20px;
-    border: 1px solid white;
+body {
+    margin: 0;
+    position: relative;
 }
 
-header, main div, footer div{
+
+/* Header */
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
 }
 
 header .headerImageContainer img {
@@ -31,7 +36,6 @@ header .headerImageContainer img {
 
 header .menu {
     width: 75%;
-    height: 100%;
 }
 
 header .menu ul {
@@ -61,6 +65,51 @@ header .headerImageContainer {
     border-radius: 50%;
 }
 
+
+/* Main */
+main {
+    padding-top: 80px;
+    width: 100%;
+}
+
+main div{
+    margin: 20px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+    /* Main project */
+main #projectsSlideShow {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    border: none;
+    display: block;
+}
+
+main #projectsSlideShow .projectSlide{
+    margin: 0;
+    padding: 0;
+}
+
+
+main #projectsSlideShow .projectSlide .previousSlide, 
+main #projectsSlideShow .projectSlide .nextSlide {
+    width: 50%;
+    height: 50%;
+    z-index: 0;
+}
+
+main #projectsSlideShow .projectSlide .projectSlideImage {
+    width: 100%;
+    height: 300px;
+    z-index: 10;
+}
+
+    /* Main chisono */
 main #chisono .imageChiSonoContainer {
     margin: 5px;
     width: 200px;
@@ -79,6 +128,7 @@ main #chisono .chiSonoSummaryContainer {
     display: block;
 }
 
+    /* Main hardSkills */
 main #hardSkills div {
     margin: 5px;
     width: 25px;
@@ -101,4 +151,17 @@ main #hardSkills div a img {
 main #hardSkills div a img:hover {
     max-width: 100%;
     height: auto;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    border-top: 1px solid white;
+}
+
+footer div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
 }

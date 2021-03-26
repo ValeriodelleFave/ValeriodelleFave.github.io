@@ -1,0 +1,10 @@
+Idee:
+- Creare un'iframe con dentro una parte della pagina dedica a una specifica skill. Per esempio mostrare un piccolo script in php dentro all'iframe.
+    <iframe id="inlineFrameExample" title="Inline Frame Example"
+      width="300"
+      height="200"
+      src="https://valeriodellefave.github.io/">
+    </iframe>
+
+
+

@@ -3,200 +3,126 @@
     background: black, dark gray
     text: white
     https://www.rit.edu/
-    Helvetica Neue (?), Helvetica, Roboto
+    font-family: Helvetica, Roboto, "Arial"
 */
 
 * {
-    color: #FF4500;
-    background-color: #444444;
+    background-color: #FFFFFF;
     font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
 body {
     margin: 0;
-    position: relative;
+    padding: 0;
 }
 
-/* Header */
+ul {
+    margin: 0;
+    padding: 0
+}
 
-header {
-    top: 0;
+div {
+    margin: 0;
+}
+
+
+/*  Navigation bar   */
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: fixed;
-    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
     border-bottom: 1px solid white;
+}
+
+/*  NAV */
+
+    /*  Logo Container  */
+
+#logoContainer {
+    width: 100px;
+    height: 100px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    margin-left: 50px;
+    z-index: 1;
 }
 
-header .headerImageContainer img {
+#logoContainer img {
     max-width: 100%;
-    height: auto;
     border-radius: 50%;
+    border: 1px solid black;
 }
 
-header .menu {
-    width: 75%;
-}
+    /*  Links Container */
 
-header .menu ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-header .languageFlagContainer {
-    margin: 5px;
-    width: 25px;
-    height: 25px;
-    border: 1px solid white;
-}
-
-header .languageFlagContainer a img {
-    max-width: 100%;
-    height: auto;
-}
-
-header .headerImageContainer {
-    margin: 5px;
-    width: 50px;
-    height: 50px;
-    border: 1px solid white;
-    border-radius: 50%;
-}
-
-/* Main */
-
-main {
-    padding-top: 80px;
+#linksContainer {
     width: 100%;
-}
-
-main div {
-    margin: 20px;
-    border: 1px solid white;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+    justify-content: space-around;
 }
 
-/* Main chisono */
-
-main #chisono {
-    background-color: blanchedalmond;
+a {
+    color: #C4C4C4;
+    text-decoration: none;
+}
+                                    /* TODO THICK UNDERLINE <A> */
+a:hover {
+    color: #F76902;
 }
 
-main #chisono .imageChiSonoContainer {
-    margin: 5px;
-    width: 200px;
-    height: 250px;
-    border: 1px solid white;
-}
-
-main #chisono .imageChiSonoContainer img {
-    max-width: 100%;
-    height: auto;
-}
-
-main #chisono .chiSonoSummaryContainer {
-    width: 100%;
-    height: 30vh;
-    display: block;
-}
-
-/* Main project */
-
-main #projectsSlideShow {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
-    border: none;
-    display: block;
-}
-
-main #projectsSlideShow .projectSlide {
-    margin: auto;
-    padding: 0;
+a:active{
+    color: #000;
     
 }
 
-main #projectsSlideShow .projectSlide .projectSlideImage {
-    width: 100%;
-    height: 300px;
-}
+    /*  Language Container  */
 
-main #projectsSlideShow .previousSlide, 
-main #projectsSlideShow .nextSlide {
-    top: 50%;
-    position: absolute;
-    font-size: 30px;
-    padding: 20px;
-    cursor: pointer;
-}
-
-main #projectsSlideShow .previousSlide:hover, 
-main #projectsSlideShow .nextSlide:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-main #projectsSlideShow .previousSlide {
-    left: 0;
-}
-
-main #projectsSlideShow .nextSlide {
-    right: 0;
-}
-
-
-
-/* Main hardSkills */
-
-main #hardSkills {
-    background-color: cadetblue;
-}
-
-main #hardSkills div {
-    margin: 5px;
-    width: 25px;
-    height: 25px;
-    border: 1px solid white;
-}
-
-main #hardSkills div:hover {
-    margin: 5px;
-    width: 50px;
-    height: 50px;
-    border: 1px solid white;
-}
-
-main #hardSkills div a img {
-    max-width: 100%;
-    height: auto;
-}
-
-main #hardSkills div a img:hover {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Main hobbiesList */
-
-main #hobbiesSlideShow {
-    background-color: burlywood;
-}
-
-/* Footer */
-
-footer {
-    width: 100%;
-    border-top: 1px solid white;
-}
-
-footer div {
+#languageContainer {
+    width: 70px;
+    height: 70px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+    margin-left: 50px;
+    z-index: 1;
+}
+
+#languageContainer img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+
+/* MAIN */
+
+#chiSono {
+    position: absolute;    /* da togliere */  
+
+    display: flex;
+    
+    width: 100%;
+    border: 1px solid black;
+}
+
+.titleContainer {
+    display: flex;
+    width: 100%;
+    
+}
+
+.contentContainer {
+    display: flex;
+}
+
+/*  Other classes   */
+
+.active {
+    color: #000;
 }

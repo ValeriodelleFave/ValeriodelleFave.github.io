@@ -96,15 +96,54 @@ a:active{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid black;
 }
 
 .titleContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #F76902;
+}
+
+.titleContainer p {
+    font-size: 26px;
 }
 
 .contentContainer {
     display: flex;
+    margin: 0 100px;
+}
+
+.contentContainer #imageContentContainer {
+    margin-right: 61px;
+    
+}
+
+.contentContainer #imageContentContainer img {
+    width: 400px;
+    height: 600px;
+}
+
+.contentContainer #content {
+    margin-left: 61px;
+}
+
+.orange {
+    color: #F76902;
+}
+
+.band {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    background-color: black;
+}
+
+.band p {
+    margin: 0;
+    background-color: inherit;
+    color: white;
+    font-size: 26px;
 }

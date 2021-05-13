@@ -4,6 +4,12 @@
     text: white
     https://www.rit.edu/
     font-family: Helvetica, Roboto, "Arial"
+
+    Colours:
+        - Black: #000
+        - White: #FFF
+        - Grey : #C4C4C4
+        - Orange: #F76902
 */
 
 * {
@@ -16,57 +22,57 @@ body {
     padding: 0;
 }
 
-ul {
-    margin: 0;
-    padding: 0
-}
-
 div {
     margin: 0;
 }
 
-
-/*  Navigation bar   */
-
+/*  NAV */
 nav {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     border-bottom: 1px solid white;
 }
 
-/*  NAV */
-
-    /*  Logo Container  */
-
-#logoContainer {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50px;
-    z-index: 1;
-}
-
-#logoContainer img {
-    max-width: 100%;
-    border-radius: 50%;
-    border: 1px solid black;
-}
-
-    /*  Links Container */
-
-#linksContainer {
+.navigationLinksContainer {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    list-style-type: none;
+    margin: 0 50px;
+    padding: 0;
 }
 
+.navigationImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigationImageContainer img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 1px black solid;
+    cursor: pointer;
+}
+
+.logoContainer {
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+}
+
+.languageContainer {
+    width: 70px;
+    height: 70px;
+    margin-right: 50px;
+}    
+
+/* Links */
 a {
     color: #C4C4C4;
     text-decoration: none;
@@ -78,51 +84,27 @@ a:hover {
 
 a:active{
     color: #000;
-    
 }
 
-    /*  Language Container  */
+.active {
+    color: #000;
+}
 
-#languageContainer {
-    width: 70px;
-    height: 70px;
+/* Containers */
+.container {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-left: 50px;
-    z-index: 1;
-}
-
-#languageContainer img {
-    max-width: 100%;
-    border-radius: 50%;
-    border: 1px solid black;
-}
-
-
-/* MAIN */
-
-#chiSono {
-    position: absolute;    /* da togliere */  
-
-    display: flex;
-    
-    width: 100%;
+    flex-direction: column;
     border: 1px solid black;
 }
 
 .titleContainer {
     display: flex;
-    width: 100%;
-    
+    justify-content: center;
+    align-items: center;
 }
 
 .contentContainer {
     display: flex;
-}
-
-/*  Other classes   */
-
-.active {
-    color: #000;
 }

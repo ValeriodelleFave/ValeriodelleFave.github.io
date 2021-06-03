@@ -17,19 +17,15 @@
     font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
-:root {
-    --text-color: #F76902;
-    --text-black: #000000;
-    --text-grey:  #C4C4C4;
-}
-
 body {
     margin: 0;
     padding: 0;
 }
 
-div {
-    margin: 0;
+:root {
+    --text-color: #F76902;
+    --text-black: #000000;
+    --text-grey:  #C4C4C4;
 }
 
 /*  NAV */
@@ -37,43 +33,18 @@ nav {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: fixed;
+    top: 0;
     font-size: 26px;
     font-weight: bold;
     border-bottom: 1px solid white;
 }
 
-.navigationLinksContainer {
+#linksContainer {
+    display: flex;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    margin: 0 50px;
-    padding: 0;
-}
-
-.navigationImageContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navigationImageContainer img {
-    max-width: 100%;
-    border-radius: 50%;
-    border: 1px black solid;
-    cursor: pointer;
-}
-
-.logoContainer {
-    width: 100px;
-    height: 100px;
-    margin-left: 50px;
-}
-
-#linksContainer div {
-    height: 100%;
+    justify-content: space-evenly;
 }
 
 a {
@@ -89,48 +60,34 @@ a:hover {
 a:active{
     color: var(--text-black)
 }
-
 .active {
-    color: #000;
+    color: var(--text-black);
 }
 
-/* Containers */
-.container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
 
-.titleContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#logoContainer {
+    margin-left: 50px;
+}
+#logoContainer img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+}  
+
+#languageContainer {
     margin-right: 50px;
 }
+#languageContainer img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 50%;
+}  
 
-.titleContainer p {
-    font-size: 26px;
-}
-
-.contentContainer {
-    display: flex;
-    margin: 0 100px;
-}
-
-.contentContainer #imageContentContainer {
-    margin-right: 61px;
-    
-}
-
-main {
-    display: grid;
-    place-items: center;
-}
-
+/* MAIN */
 #chiSono, #progetti {
     width: 100%;
-    margin: 0 10%;
 }
 
 #progetti {
@@ -153,23 +110,48 @@ main {
     margin-right: 2%;
 }
 
-.band {
+.contentContainer {
     display: flex;
     align-items: center;
-    line-height: 2;
+    justify-content: center;
 }
 
-.imageContentContainer {
-    padding: 0 8% 2% 8%;
+.contentContainer .imageContentContainer {
+    padding: 0 8% 5% 8%;
 }
 
-.imageContentContainer img {
+.contentContainer .imageContentContainer img {
     width: 400px;
     height: 600px;
 }
 
-.content {
+.contentContainer .content {
     font-size: 24px;
+    line-height: 2.5;
+    padding-right: 8%;
+}
+
+.slider {
+    width: 1200px;
+    height: 700px;
+    border: 1px solid black;
+}
+
+.slider .previous {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+}
+
+.sliderImage {
+    width: 100%;
+    z-index: 0;
+}
+
+.slider .next {
+    z-index: 1;
+    position: absolute;
+    
 }
 
 /*ROW*/
@@ -177,10 +159,13 @@ main {
     height: 250px;
     width: 100%;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/*  Other classes   */
-
-.active {
-    color: var(--text-black);
+.rowContent {
+    background-color: inherit;
+    color: #FFF;
+    font-size: 72px;
 }

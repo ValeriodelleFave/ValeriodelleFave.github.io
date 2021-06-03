@@ -17,6 +17,12 @@
     font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
+:root {
+    --text-color: #F76902;
+    --text-black: #000000;
+    --text-grey:  #C4C4C4;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -66,24 +72,22 @@ nav {
     margin-left: 50px;
 }
 
-.languageContainer {
-    width: 70px;
-    height: 70px;
-    margin-right: 50px;
-}    
+#linksContainer div {
+    height: 100%;
+}
 
-/* Links */
 a {
-    color: #C4C4C4;
+    color: var(--text-grey);
     text-decoration: none;
 }
-                                    /* TODO THICK UNDERLINE <A> */
+
 a:hover {
-    color: #F76902;
+    color: var(--text-color);
+    border-bottom: 1px solid black;
 }
 
 a:active{
-    color: #000;
+    color: var(--text-black)
 }
 
 .active {
@@ -102,7 +106,7 @@ a:active{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #F76902;
+    margin-right: 50px;
 }
 
 .titleContainer p {
@@ -119,31 +123,64 @@ a:active{
     
 }
 
-.contentContainer #imageContentContainer img {
-    width: 400px;
-    height: 600px;
+main {
+    display: grid;
+    place-items: center;
 }
 
-.contentContainer #content {
-    margin-left: 61px;
+#chiSono, #progetti {
+    width: 100%;
+    margin: 0 10%;
 }
 
-.orange {
-    color: #F76902;
+#progetti {
+    height: 1024px;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 2% 0;
+    font-size: 48px;
+    color: var(--text-color);
+}
+
+.titleContainer img {
+    width: 100px;
+    height: 100px;
+    margin-right: 2%;
 }
 
 .band {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
+    line-height: 2;
+}
+
+.imageContentContainer {
+    padding: 0 8% 2% 8%;
+}
+
+.imageContentContainer img {
+    width: 400px;
+    height: 600px;
+}
+
+.content {
+    font-size: 24px;
+}
+
+/*ROW*/
+.row {
     height: 250px;
+    width: 100%;
     background-color: black;
 }
 
-.band p {
-    margin: 0;
-    background-color: inherit;
-    color: white;
-    font-size: 26px;
+/*  Other classes   */
+
+.active {
+    color: var(--text-black);
 }

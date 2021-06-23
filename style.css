@@ -62,6 +62,10 @@ body {
     padding: 2% 0;
 }
 
+.hidden {
+    display: none;
+}
+
 /* NAVIGATION BAR */
 nav {
     display: flex;

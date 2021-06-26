@@ -30,6 +30,8 @@ body {
     --text-color: #F76902;
     --text-black: #000000;
     --text-grey:  #C4C4C4;
+
+    --bg-footer: #393939;
 }
 
 .w-100 {
@@ -201,16 +203,28 @@ a:active{
 
 .skills {
     display: grid;
-    
-    /* TODO creare griglia skills */
+    grid-template-columns: auto auto auto;
+    grid-gap: 180px 180px;
 }
 
 .skill {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border: #000000 solid 1px;
 }
 .skill img {
     width: inherit;
     height: inherit;
+}
+
+/* TODO HOBBY SECTION */
+
+footer {
+    background-color: var(--bg-footer);
+    color: var(--text-color);
+    display: flex;
+}
+
+footer .titleContainer {
+    background-color: var(--bg-footer);
 }

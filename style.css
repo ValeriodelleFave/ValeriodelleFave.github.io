@@ -222,9 +222,29 @@ a:active{
 footer {
     background-color: var(--bg-footer);
     color: var(--text-color);
-    display: flex;
 }
 
 footer .titleContainer {
-    background-color: var(--bg-footer);
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+}
+
+footer .titleContainer p {
+    background-color: inherit;
+}
+
+.contactCards {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: inherit;
+}
+
+.contactCard {
+    width: 150px;
+    height: 250px;
+    background-color: #FFF;
+    border: 1px solid #000;
 }

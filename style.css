@@ -165,8 +165,8 @@ a:active{
 
 /* SLIDER */
 .slider {
-    width: 1200px;
-    height: 700px;
+    width: 800px; /*Rapporto 16:9*/
+    height: 470px;
     border: 1px solid black;
     position: relative;
     display: flex;

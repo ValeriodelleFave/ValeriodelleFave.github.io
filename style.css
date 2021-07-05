@@ -140,7 +140,6 @@ a:active{
 
 /* BLANK ROW */
 .row {
-    height: 250px;
     background-color: black;
 }
 
@@ -265,4 +264,6 @@ footer p {
 .contactCard p {
     background-color: inherit;
     text-align: center;
+    font-size: 36px;
+    padding-top: 5%;
 }

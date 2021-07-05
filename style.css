@@ -65,7 +65,7 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 /* NAVIGATION BAR */
@@ -120,6 +120,43 @@ a:active{
     border-radius: 50%;
 }  
 
+/* NAVIGATOR */
+
+#navigator {
+    position: fixed;
+    right: 2%;
+    top: 30%;
+    
+}
+
+#navigator div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 300px;
+    padding: 20px;
+}
+
+
+#navigator div a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+}
+
+#navigator div a:hover {
+    border-color: var(--text-black);
+}
+
+#navigator div img {
+    width: 100%;
+    
+    border-radius: 50%;
+}
+
+
 /* ROW */
 .titleContainer {
     margin: 2% 0;
@@ -152,12 +189,12 @@ a:active{
 
 /* CHI SONO ROW */
 
-#chiSono div img:last-child {
+#presentazione div img:last-child {
     width: 400px;
     height: 600px;
 }
 
-#chiSono div:last-child {
+#presentazione div:last-child {
     font-size: 24px;
     line-height: 2.5;
     padding-right: 8%;

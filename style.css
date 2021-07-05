@@ -147,6 +147,7 @@ a:active{
     background-color: inherit;
     color: #FFF;
     font-size: 72px;
+    text-align: center;
 }
 
 /* CHI SONO ROW */
@@ -203,8 +204,8 @@ a:active{
 .skills {
     display: grid;
     grid-template-columns: auto auto auto;
-    row-gap: 180px;
-    column-gap: 180px;
+    row-gap: 90px;
+    column-gap: 90px;
 }
 
 .skill {

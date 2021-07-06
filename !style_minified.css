@@ -1,0 +1,317 @@
+/* 
+    Title, subtitles: white/
+    background: black, dark gray
+    text: white
+    font-family: Helvetica, Roboto, "Arial"
+
+    Colours:
+        - Black: #000
+        - White: #FFF
+        - Grey : #C4C4C4
+        - Orange: #F76902
+*/
+
+/* Reset */
+
+* {
+    background-color: #FFFFFF;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Utils */
+
+:root {
+    --text-color: #F76902;
+    --text-black: #000000;
+    --text-grey:  #C4C4C4;
+
+    --bg-footer: #393939;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paddingLeft-8 {
+    padding-left: 8%;
+}
+
+.paddingRight-5 {
+    padding-right: 5%;
+}
+
+.paddingRight-8 {
+    padding-right: 8%;
+}
+
+.paddingBottom-2 {
+    padding-bottom: 2%;
+}
+
+.paddingTopBottom-2 {
+    padding: 2% 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* NAVIGATION BAR */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    font-size: 26px;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    z-index: 1000;
+}
+
+#linksContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    color: var(--text-grey);
+    text-decoration: none;
+}
+
+#linksContainer a:hover {
+    color: var(--text-color);
+    border-bottom: 1px solid black;
+}
+
+a:active{
+    color: var(--text-black)
+}.active {color: var(--text-black);} /* Da cancellare */
+
+#logoContainer {
+    margin-left: 50px;
+}
+#logoContainer img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+}  
+
+#languageContainer {
+    margin-right: 50px;
+}
+#languageContainer img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 50%;
+}  
+
+/* NAVIGATOR */
+
+#navigator {
+    position: fixed;
+    right: 2%;
+    top: 30%;
+    background: none;
+    
+    z-index: 1000;
+}
+
+#navigator div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 300px;
+    padding: 20px;
+
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+#navigator div a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+}
+
+#navigator div a:hover {
+    border-color: var(--text-black);
+}
+
+#navigator div img {
+    width: 100%;
+    
+    border-radius: 50%;
+}
+
+
+/* ROW */
+.titleContainer {
+    margin: 2% 0;
+    font-size: 48px;
+    color: var(--text-color);
+}
+.titleContainer p {
+    margin: 2% 0;
+    font-size: 48px;
+    color: var(--text-color);
+}
+
+.titleContainer img {
+    width: 100px;
+    height: 100px;
+    margin-right: 2%;
+}
+
+/* BLANK ROW */
+.row {
+    background-color: black;
+}
+
+.rowText {
+    background-color: inherit;
+    color: #FFF;
+    font-size: 72px;
+    text-align: center;
+}
+
+/* PRESENTAZIONE ROW */
+
+#presentazione div img:last-child {
+    width: 400px;
+    height: 600px;
+}
+
+#presentazione div:last-child {
+    font-size: 24px;
+    line-height: 2.5;
+    padding-right: 8%;
+}
+
+/* SLIDER */
+.slider {
+    width: 800px; /*Rapporto 16:9*/
+    height: 470px;
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+}
+
+.sliderImage {
+    height: 100%;
+}
+
+.slider .previous, .slider .next {
+    width: 100px;
+    height: 100px;
+    border: 1px black solid;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    color: #000000;
+    font-size: 48px;
+}
+
+.slider .previous:hover, .slider .next:hover {
+    background-color: #c4c4c4;
+}
+
+.slider .previous {
+    left: 20;
+}
+
+.slider .next{
+    right: 20;
+} 
+
+/* SKILLS SECTION */
+
+.skills {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 90px;
+    column-gap: 90px;
+}
+
+.skill {
+    width: 200px;
+    height: 200px;
+    border: #000000 solid 1px;
+}
+.skill img {
+    width: 100%;
+}
+
+/* TODO HOBBY SECTION */
+
+footer {
+    background-color: var(--bg-footer);
+    color: var(--text-color);
+}
+
+footer .titleContainer {
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+}
+
+footer .titleContainer p {
+    background-color: inherit;
+}
+
+footer p {
+    text-align: center;
+    background-color: inherit;
+    padding: 0 0 1% 0;
+    margin: 0;
+}
+
+.contactCards {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: inherit;
+}
+
+.contactCard {
+    width: 200px;
+    height: 300px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactCard a {
+    background: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.contactCard img {
+    width: 80%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.contactCard p {
+    background-color: inherit;
+    text-align: center;
+    font-size: 36px;
+    padding-top: 5%;
+}

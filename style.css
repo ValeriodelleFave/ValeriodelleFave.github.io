@@ -91,7 +91,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+#linksContainer a:hover {
     color: var(--text-color);
     border-bottom: 1px solid black;
 }
@@ -126,18 +126,21 @@ a:active{
     position: fixed;
     right: 2%;
     top: 30%;
+    background: none;
     
+    z-index: 1000;
 }
 
 #navigator div {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    border: 1px solid black;
     height: 300px;
     padding: 20px;
-}
 
+    border: 1px solid black;
+    border-radius: 100%;
+}
 
 #navigator div a {
     width: 40px;
@@ -187,7 +190,7 @@ a:active{
     text-align: center;
 }
 
-/* CHI SONO ROW */
+/* PRESENTAZIONE ROW */
 
 #presentazione div img:last-child {
     width: 400px;
@@ -294,9 +297,17 @@ footer p {
     flex-direction: column;
 }
 
+.contactCard a {
+    background: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
 .contactCard img {
-    width: 100%;
-    border-radius: 25%;
+    width: 80%;
+    border-radius: 50%;
+    border: 1px solid black;
 }
 
 .contactCard p {

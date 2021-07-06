@@ -65,7 +65,7 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 /* NAVIGATION BAR */
@@ -91,7 +91,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+#linksContainer a:hover {
     color: var(--text-color);
     border-bottom: 1px solid black;
 }
@@ -120,6 +120,46 @@ a:active{
     border-radius: 50%;
 }  
 
+/* NAVIGATOR */
+
+#navigator {
+    position: fixed;
+    right: 2%;
+    top: 30%;
+    background: none;
+    
+    z-index: 1000;
+}
+
+#navigator div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 300px;
+    padding: 20px;
+
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+#navigator div a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+}
+
+#navigator div a:hover {
+    border-color: var(--text-black);
+}
+
+#navigator div img {
+    width: 100%;
+    
+    border-radius: 50%;
+}
+
+
 /* ROW */
 .titleContainer {
     margin: 2% 0;
@@ -147,16 +187,17 @@ a:active{
     background-color: inherit;
     color: #FFF;
     font-size: 72px;
+    text-align: center;
 }
 
-/* CHI SONO ROW */
+/* PRESENTAZIONE ROW */
 
-#chiSono div img:last-child {
+#presentazione div img:last-child {
     width: 400px;
     height: 600px;
 }
 
-#chiSono div:last-child {
+#presentazione div:last-child {
     font-size: 24px;
     line-height: 2.5;
     padding-right: 8%;
@@ -203,8 +244,8 @@ a:active{
 .skills {
     display: grid;
     grid-template-columns: auto auto auto;
-    row-gap: 180px;
-    column-gap: 180px;
+    row-gap: 90px;
+    column-gap: 90px;
 }
 
 .skill {
@@ -256,9 +297,17 @@ footer p {
     flex-direction: column;
 }
 
+.contactCard a {
+    background: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
 .contactCard img {
-    width: 100%;
-    border-radius: 25%;
+    width: 80%;
+    border-radius: 50%;
+    border: 1px solid black;
 }
 
 .contactCard p {

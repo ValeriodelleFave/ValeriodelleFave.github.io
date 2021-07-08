@@ -11,7 +11,7 @@
         - Orange: #F76902
 */
 
-/* MARK: Reset */
+/* MARK: General */
 
 * {
     background-color: #FFFFFF;
@@ -22,6 +22,27 @@ body {
     margin: 0;
     padding: 0;
 }
+
+a {
+    color: var(--text-grey);
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* MARK: Utils */
 
@@ -80,19 +101,13 @@ nav {
     justify-content: space-evenly;
     position: fixed;
     top: 0;
-    font-weight: bold;
-    border-bottom: 1px solid white;
     z-index: 1000;
 }
 
 #linksContainer {
     display: flex;
     justify-content: space-evenly;
-}
-
-a {
-    color: var(--text-grey);
-    text-decoration: none;
+    font-weight: bold;
 }
 
 #linksContainer a:hover {
@@ -100,35 +115,58 @@ a {
     border-bottom: 1px solid black;
 }
 
-a:active{
+#linksContainer a:active{
     color: var(--text-black)
 }.active {color: var(--text-black);} /* Da cancellare */
 
-#logoContainer {
-    margin-left: 50px;
+#logoContainer img, #languageContainer img {
+    border: 1px solid black;
+    border-radius: 50%;
 }
+
+#logoContainer {
+    padding-left: 50px;
+}
+
 #logoContainer img {
     width: 100px;
     height: 100px;
-    border: 1px solid black;
-    border-radius: 50%;
 }  
 
 #languageContainer {
-    margin-right: 50px;
+    padding-right: 50px;
 }
+
 #languageContainer img {
     width: 70px;
     height: 70px;
-    border: 1px solid black;
-    border-radius: 50%;
-}  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* MARK: NAVIGATOR */
 
 #navigator {
     position: fixed;
-    right: 2%;
+    right: 0;
     top: 30%;
     background: none;
     z-index: 1000;
@@ -140,8 +178,14 @@ a:active{
     flex-direction: column;
     height: 300px;
     padding: 20px;
-    border: 1px solid black;
-    border-radius: 100%;
+    
+    border-top: 1px solid black;
+    border-top-left-radius: 25%;
+
+    border-left: 1px solid black;
+
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 25%;
 }
 
 #navigator div a {
@@ -161,12 +205,11 @@ a:active{
 }
 
 
-/* MARK: ROW */
+/* MARK: Content ROW */
 .titleContainer {
     margin: 2% 0;   
 }
 .titleContainer p {
-    margin: 2% 0;
     color: var(--text-color);
 }
 
@@ -189,7 +232,7 @@ a:active{
 
 /* MARK: PRESENTAZIONE ROW */
 
-#presentazione div img:last-child {
+.presentationImage {
     width: 400px;
     height: 600px;
 }
@@ -199,17 +242,30 @@ a:active{
 }
 
 /* MARK: SLIDER */
+
 .slider {
     width: 800px; /*Rapporto 16:9*/
     height: 470px;
     border: 1px solid black;
-    position: relative;
     display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
-.sliderImage {
+.slider img {
+    width: inherit;
+    flex-shrink: 0;
     height: 100%;
+    pointer-events: none;
 }
+
+.slider > img {
+    scroll-snap-align: start;
+}
+
+
 
 .slider .previous, .slider .next {
     width: 100px;
@@ -217,9 +273,10 @@ a:active{
     border: 1px black solid;
     border-radius: 50%;
     cursor: pointer;
-    position: absolute;
     color: #000000;
     font-size: 48px;
+    position: absolute;
+    display: flex;
 }
 
 .slider .previous:hover, .slider .next:hover {
@@ -227,12 +284,35 @@ a:active{
 }
 
 .slider .previous {
-    left: 20;
+    
 }
 
 .slider .next{
-    right: 20;
+    
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* MARK: SKILLS SECTION */
 
@@ -253,6 +333,29 @@ a:active{
 }
 
 /* MARK: TODO HOBBY SECTION */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* MARK: Footer */
@@ -312,6 +415,14 @@ footer .titleContainer p {
     text-align: center;
     padding-top: 5%;
 }
+
+
+
+
+
+
+
+
 
 
 

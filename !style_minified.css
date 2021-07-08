@@ -11,7 +11,7 @@
         - Orange: #F76902
 */
 
-/* Reset */
+/* MARK: Reset */
 
 * {
     background-color: #FFFFFF;
@@ -23,14 +23,20 @@ body {
     padding: 0;
 }
 
-/* Utils */
+/* MARK: Utils */
 
 :root {
     --text-color: #F76902;
     --text-black: #000000;
     --text-grey:  #C4C4C4;
-
     --bg-footer: #393939;
+
+    --nav-text-size: 26px;
+    --presentation-text-size: 24px;
+    --row-text-size: 72px;
+    --titleContainer-text-size: 48px;
+    --contactCard-text-size: 36px;
+    --copyright-text: 16px;
 }
 
 .w-100 {
@@ -67,14 +73,13 @@ body {
     display: none !important;
 }
 
-/* NAVIGATION BAR */
+/* MARK: NAVIGATION BAR */
 nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     position: fixed;
     top: 0;
-    font-size: 26px;
     font-weight: bold;
     border-bottom: 1px solid white;
     z-index: 1000;
@@ -119,14 +124,13 @@ a:active{
     border-radius: 50%;
 }  
 
-/* NAVIGATOR */
+/* MARK: NAVIGATOR */
 
 #navigator {
     position: fixed;
     right: 2%;
     top: 30%;
     background: none;
-    
     z-index: 1000;
 }
 
@@ -136,7 +140,6 @@ a:active{
     flex-direction: column;
     height: 300px;
     padding: 20px;
-
     border: 1px solid black;
     border-radius: 100%;
 }
@@ -154,20 +157,16 @@ a:active{
 
 #navigator div img {
     width: 100%;
-    
     border-radius: 50%;
 }
 
 
-/* ROW */
+/* MARK: ROW */
 .titleContainer {
-    margin: 2% 0;
-    font-size: 48px;
-    color: var(--text-color);
+    margin: 2% 0;   
 }
 .titleContainer p {
     margin: 2% 0;
-    font-size: 48px;
     color: var(--text-color);
 }
 
@@ -177,7 +176,7 @@ a:active{
     margin-right: 2%;
 }
 
-/* BLANK ROW */
+/* MARK: BLANK ROW */
 .row {
     background-color: black;
 }
@@ -185,24 +184,21 @@ a:active{
 .rowText {
     background-color: inherit;
     color: #FFF;
-    font-size: 72px;
     text-align: center;
 }
 
-/* PRESENTAZIONE ROW */
+/* MARK: PRESENTAZIONE ROW */
 
 #presentazione div img:last-child {
     width: 400px;
     height: 600px;
 }
 
-#presentazione div:last-child {
-    font-size: 24px;
+.presentationText {
     line-height: 2.5;
-    padding-right: 8%;
 }
 
-/* SLIDER */
+/* MARK: SLIDER */
 .slider {
     width: 800px; /*Rapporto 16:9*/
     height: 470px;
@@ -238,7 +234,7 @@ a:active{
     right: 20;
 } 
 
-/* SKILLS SECTION */
+/* MARK: SKILLS SECTION */
 
 .skills {
     display: grid;
@@ -256,8 +252,10 @@ a:active{
     width: 100%;
 }
 
-/* TODO HOBBY SECTION */
+/* MARK: TODO HOBBY SECTION */
 
+
+/* MARK: Footer */
 footer {
     background-color: var(--bg-footer);
     color: var(--text-color);
@@ -275,7 +273,7 @@ footer .titleContainer p {
     background-color: inherit;
 }
 
-footer p {
+.copyrightText {
     text-align: center;
     background-color: inherit;
     padding: 0 0 1% 0;
@@ -312,6 +310,124 @@ footer p {
 .contactCard p {
     background-color: inherit;
     text-align: center;
-    font-size: 36px;
     padding-top: 5%;
+}
+
+
+
+
+
+
+
+
+/* MARK: MEDIA QUERY FOR TEXT SIZE - 15%  */
+
+/* Extra Small */
+
+@media only screen and (max-width: 300px) {
+    nav {
+        font-size: var(--nav-text-size);
+    }
+
+    .presentationText {
+        font-size: var(--presentation-text-size);
+    }
+
+    .rowText {
+        font-size: var(--row-text-size);
+    }
+
+    .titleContainer p {
+        font-size: var(--titleContainer-text-size);
+    }
+
+    .contactCard p {
+        font-size: var(--contactCard-text-size);
+    }
+
+    .copyrightText {
+        font-size: var(--copyright-text); 
+    }
+}
+
+/* Small */
+@media only screen and (max-width: 600px) {
+    nav {
+        font-size: var(--nav-text-size);
+    }
+
+    .presentationText {
+        font-size: var(--presentation-text-size);
+    }
+
+    .rowText {
+        font-size: var(--row-text-size);
+    }
+
+    .titleContainer p {
+        font-size: var(--titleContainer-text-size);
+    }
+
+    .contactCard p {
+        font-size: var(--contactCard-text-size);
+    }
+
+    .copyrightText {
+        font-size: var(--copyright-text); 
+    }
+}
+
+/* Medium */
+@media only screen and (max-width: 900px) {
+    nav {
+        font-size: var(--nav-text-size);
+    }
+
+    .presentationText {
+        font-size: var(--presentation-text-size);
+    }
+
+    .rowText {
+        font-size: var(--row-text-size);
+    }
+
+    .titleContainer p {
+        font-size: var(--titleContainer-text-size);
+    }
+
+    .contactCard p {
+        font-size: var(--contactCard-text-size);
+    }
+
+    .copyrightText {
+        font-size: var(--copyright-text); 
+    }
+}
+
+
+/* Large */
+ @media only screen and (min-width: 901px) {
+    nav {
+        font-size: var(--nav-text-size);
+    }
+
+    .presentationText {
+        font-size: var(--presentation-text-size);
+    }
+
+    .rowText {
+        font-size: var(--row-text-size);
+    }
+
+    .titleContainer p {
+        font-size: var(--titleContainer-text-size);
+    }
+
+    .contactCard p {
+        font-size: var(--contactCard-text-size);
+    }
+
+    .copyrightText {
+        font-size: var(--copyright-text); 
+    }
 }

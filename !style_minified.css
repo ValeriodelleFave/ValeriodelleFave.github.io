@@ -57,7 +57,9 @@ a {
     --row-text-size: 72px;
     --titleContainer-text-size: 48px;
     --contactCard-text-size: 36px;
-    --copyright-text: 16px;
+    --copyright-text-size: 16px;
+    --slideTitle-text-size: 36px;
+    --slideDescription-text-size: 24px;
 }
 
 .w-100 {
@@ -206,6 +208,7 @@ nav {
 
 
 /* MARK: Content ROW */
+
 .titleContainer {
     margin: 2% 0;   
 }
@@ -239,6 +242,7 @@ nav {
 
 .presentationText {
     line-height: 2.5;
+    max-height: 600px;
 }
 
 /* MARK: SLIDER */
@@ -254,64 +258,33 @@ nav {
     scroll-behavior: smooth;
 }
 
-.slider img {
-    width: inherit;
+.slide {
     flex-shrink: 0;
+    width: 100%;
     height: 100%;
-    pointer-events: none;
+    position: relative;
 }
 
-.slider > img {
+.slider > .slide {
     scroll-snap-align: start;
 }
 
+.slide img {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
 
-
-.slider .previous, .slider .next {
-    width: 100px;
-    height: 100px;
-    border: 1px black solid;
-    border-radius: 50%;
-    cursor: pointer;
-    color: #000000;
-    font-size: 48px;
+.slide div {
     position: absolute;
-    display: flex;
+    top: 80%;
+    left: 15%;
 }
 
-.slider .previous:hover, .slider .next:hover {
-    background-color: #c4c4c4;
+.slideTextContainer p {
+    padding: 0;
+    margin: 0;
 }
-
-.slider .previous {
-    
-}
-
-.slider .next{
-    
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* MARK: SKILLS SECTION */
@@ -327,9 +300,11 @@ nav {
     width: 200px;
     height: 200px;
     border: #000000 solid 1px;
+    border-radius: 25%;
 }
 .skill img {
     width: 100%;
+    border-radius: inherit;
 }
 
 /* MARK: TODO HOBBY SECTION */
@@ -457,7 +432,15 @@ footer .titleContainer p {
     }
 
     .copyrightText {
-        font-size: var(--copyright-text); 
+        font-size: var(--copyright-text-size); 
+    }
+
+    .slideTitle{
+        font-size: var(--slideTitle-text-size);
+    }
+
+    .slideDescription{
+        font-size: var(--slideDescription-text-size);
     }
 }
 
@@ -484,7 +467,15 @@ footer .titleContainer p {
     }
 
     .copyrightText {
-        font-size: var(--copyright-text); 
+        font-size: var(--copyright-text-size); 
+    }
+
+    .slideTitle{
+        font-size: var(--slideTitle-text-size);
+    }
+
+    .slideDescription{
+        font-size: var(--slideDescription-text-size);
     }
 }
 
@@ -511,7 +502,15 @@ footer .titleContainer p {
     }
 
     .copyrightText {
-        font-size: var(--copyright-text); 
+        font-size: var(--copyright-text-size); 
+    }
+    
+    .slideTitle{
+        font-size: var(--slideTitle-text-size);
+    }
+
+    .slideDescription{
+        font-size: var(--slideDescription-text-size);
     }
 }
 
@@ -539,6 +538,14 @@ footer .titleContainer p {
     }
 
     .copyrightText {
-        font-size: var(--copyright-text); 
+        font-size: var(--copyright-text-size); 
+    }
+    
+    .slideTitle{
+        font-size: var(--slideTitle-text-size);
+    }
+
+    .slideDescription{
+        font-size: var(--slideDescription-text-size);
     }
 }

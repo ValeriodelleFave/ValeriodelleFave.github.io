@@ -301,11 +301,64 @@ nav {
     height: 200px;
     border: #000000 solid 1px;
     border-radius: 25%;
+    position: relative;
 }
 .skill img {
     width: 100%;
     border-radius: inherit;
 }
+
+.skillText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.85);
+    color: var(--text-color);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+
+.skillText > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.skillText:hover{
+    opacity: 1;
+    backdrop-filter: blur(5px);
+}
+
+.skillText:hover > * {
+    transform: translateY(0);
+}
+
+.skillText p {
+    text-align: center;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skillText p:first-child {
+    font-weight: bold;
+    font-size: 36px;
+    padding-bottom: 10%;
+}
+
+.skillText p:last-child {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
 
 /* MARK: TODO HOBBY SECTION */
 

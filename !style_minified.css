@@ -258,6 +258,7 @@ nav {
     scroll-behavior: smooth;
     border-top-right-radius: 10%;
     border-top-left-radius: 10%;
+    margin: 0 10%;
 }
 
 .slide {

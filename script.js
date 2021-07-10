@@ -1,1 +1,1 @@
-window.addEventListener("scroll",e=>{const d=document.getElementById("navBar"),n=document.getElementById("navigator");console.log("-----------------"),d.clientHeight<window.scrollY?(d.classList.add("hidden"),n.classList.remove("hidden")):(d.classList.remove("hidden"),n.classList.add("hidden"))});
+window.addEventListener("scroll",e=>{const d=document.getElementById("navBar"),n=document.getElementById("navigator");d.clientHeight<window.scrollY?(d.classList.add("hidden"),n.classList.remove("hidden")):(d.classList.remove("hidden"),n.classList.add("hidden"))});

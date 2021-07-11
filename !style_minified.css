@@ -52,14 +52,17 @@ a {
     --text-grey:  #C4C4C4;
     --bg-footer: #393939;
 
-    --nav-text-size: 26px;
-    --presentation-text-size: 24px;
-    --row-text-size: 72px;
-    --titleContainer-text-size: 48px;
-    --contactCard-text-size: 36px;
-    --copyright-text-size: 16px;
-    --slideTitle-text-size: 36px;
+    --row-text-size             : 48px;
+    --titleContainer-text-size  : 48px;
+    --contactCard-text-size     : 36px;
+    --slideTitle-text-size      : 36px;
+    --skillText-title-size      : 36px;
+    --nav-text-size             : 26px;
     --slideDescription-text-size: 24px;
+    --presentation-text-size    : 24px;
+    --skillText-subtitle-size   : 18px;
+    --copyright-text-size       : 18px;
+    
 }
 
 .w-100 {
@@ -242,7 +245,6 @@ nav {
 
 .presentationText {
     line-height: 2.5;
-    max-height: 600px;
 }
 
 /* MARK: SLIDER */
@@ -318,9 +320,6 @@ nav {
     width: 100%;
     height: 100%;
     border-radius: inherit;
-    display: flex;
-    justify-content: center;
-    align-content: center;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.85);
     color: var(--text-color);
@@ -352,40 +351,12 @@ nav {
 
 .skillText p:first-child {
     font-weight: bold;
-    font-size: 36px;
     padding-bottom: 10%;
 }
 
 .skillText p:last-child {
     font-weight: 500;
-    font-size: 18px;
 }
-
-
-
-/* MARK: TODO HOBBY SECTION */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -454,119 +425,135 @@ footer .titleContainer p {
 
 
 
-
-
-
-
-
-
-
-
 /* MARK: MEDIA QUERY FOR TEXT SIZE - 15%  */
 
 /* Extra Small */
 
 @media only screen and (max-width: 300px) {
     nav {
-        font-size: var(--nav-text-size);
+        font-size: 15.9px;
     }
 
     .presentationText {
-        font-size: var(--presentation-text-size);
+        font-size: 14.7px;
     }
 
     .rowText {
-        font-size: var(--row-text-size);
+        font-size: 28.2px;
     }
 
     .titleContainer p {
-        font-size: var(--titleContainer-text-size);
+        font-size: 28.2px;
     }
 
     .contactCard p {
-        font-size: var(--contactCard-text-size);
+        font-size: 22.1px;
     }
 
     .copyrightText {
-        font-size: var(--copyright-text-size); 
+        font-size: 11px; 
+    }
+    
+    .slideTitle {
+        font-size: 22.1px;
     }
 
-    .slideTitle{
-        font-size: var(--slideTitle-text-size);
+    .slideDescription {
+        font-size: 14.7px;
     }
 
-    .slideDescription{
-        font-size: var(--slideDescription-text-size);
+    .skillText:first-child {
+        font-size: 22.1px;
+    }
+
+    .skillText:last-child {
+        font-size: 11px;
     }
 }
 
 /* Small */
 @media only screen and (max-width: 600px) {
     nav {
-        font-size: var(--nav-text-size);
+        font-size: 18.8;
     }
 
     .presentationText {
-        font-size: var(--presentation-text-size);
+        font-size: 17.3px;
     }
 
     .rowText {
-        font-size: var(--row-text-size);
+        font-size: 33.2px;
     }
 
     .titleContainer p {
-        font-size: var(--titleContainer-text-size);
+        font-size: 33.2px;
     }
 
     .contactCard p {
-        font-size: var(--contactCard-text-size);
+        font-size: 26px;
     }
 
     .copyrightText {
-        font-size: var(--copyright-text-size); 
+        font-size: 13px; 
+    }
+    
+    .slideTitle {
+        font-size: 26px;
     }
 
-    .slideTitle{
-        font-size: var(--slideTitle-text-size);
+    .slideDescription {
+        font-size: 17.3px;
     }
 
-    .slideDescription{
-        font-size: var(--slideDescription-text-size);
+    .skillText:first-child {
+        font-size: 26px;
+    }
+
+    .skillText:last-child {
+        font-size: 13px;
     }
 }
 
 /* Medium */
 @media only screen and (max-width: 900px) {
     nav {
-        font-size: var(--nav-text-size);
+        font-size: 22.1px;
     }
 
     .presentationText {
-        font-size: var(--presentation-text-size);
+        font-size: 20.4px;
     }
 
     .rowText {
-        font-size: var(--row-text-size);
+        font-size: 39.1px;
     }
 
     .titleContainer p {
-        font-size: var(--titleContainer-text-size);
+        font-size: 39.1px;
     }
 
     .contactCard p {
-        font-size: var(--contactCard-text-size);
+        font-size: 30.6px;
     }
 
     .copyrightText {
-        font-size: var(--copyright-text-size); 
+        font-size: 15.3px; 
     }
     
-    .slideTitle{
-        font-size: var(--slideTitle-text-size);
+    .slideTitle {
+        font-size: 30.6px;
     }
 
-    .slideDescription{
-        font-size: var(--slideDescription-text-size);
+    .slideDescription {
+        font-size: 20.4px;
+    }
+
+    .skillText:first-child {
+        font-size: 30.6px;
+    }
+
+    .skillText:last-child {
+        font-size: 15.3px;
     }
 }
 
@@ -597,11 +584,19 @@ footer .titleContainer p {
         font-size: var(--copyright-text-size); 
     }
     
-    .slideTitle{
+    .slideTitle {
         font-size: var(--slideTitle-text-size);
     }
 
-    .slideDescription{
+    .slideDescription {
         font-size: var(--slideDescription-text-size);
+    }
+
+    .skillText:first-child {
+        font-size: var(--skillText-title-size);
+    }
+
+    .skillText:last-child {
+        font-size: var(--skillText-subtitle-size);
     }
 }

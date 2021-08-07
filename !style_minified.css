@@ -361,138 +361,117 @@ footer {
         text-align: center;
     }
 
-
-/* Mobile positioning */
-@media only screen and (max-width: 900px) {
-    .skills {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-
-    #presentazione div:last-child {
-        flex-direction: column;
-    }
-
-    #presentazione div div:first-child {
-        order: 1;
-    }
-
-    #presentazione div div:last-child {
-        order: 2;
-    }
-
-}
-
-
-
 /* MARK: MEDIA QUERY FOR TEXT SIZE - 15%  */
 
 /* Extra Small */
 
 @media only screen and (max-width: 300px) {
     nav {
-        font-size: var(--nav-text-size);
+        font-size: 15.97px;
     }
 
     .presentationText {
-        font-size: var(--presentation-text-size);
+        font-size: 14.74px;
     }
 
     .rowText {
-        font-size: var(--row-text-size);
+        font-size: 44.22px;
     }
 
     .titleContainer p {
-        font-size: var(--titleContainer-text-size);
+        font-size: 29.48px;
     }
 
     .contactCard p {
-        font-size: var(--contactCard-text-size);
+        font-size: 22.11px;
     }
 
     .copyrightText {
-        font-size: var(--copyright-text-size); 
+        font-size: 9.83px;
     }
 
     .slideTitle{
-        font-size: var(--slideTitle-text-size);
+        font-size: 22.11px;
     }
 
     .slideDescription{
-        font-size: var(--slideDescription-text-size);
+        font-size: 14.74px;
     }
+
 }
 
 /* Small */
 @media only screen and (max-width: 600px) {
     nav {
-        font-size: var(--nav-text-size);
+        font-size: 18.78px;
     }
 
     .presentationText {
-        font-size: var(--presentation-text-size);
+        font-size: 17.34px;
     }
 
     .rowText {
-        font-size: var(--row-text-size);
+        font-size: 52.02px;
     }
 
     .titleContainer p {
-        font-size: var(--titleContainer-text-size);
+        font-size: 34.68px;
     }
 
     .contactCard p {
-        font-size: var(--contactCard-text-size);
+        font-size: 26.01px;
     }
 
     .copyrightText {
-        font-size: var(--copyright-text-size); 
+        font-size: 11.56px;
     }
 
     .slideTitle{
-        font-size: var(--slideTitle-text-size);
+        font-size: 26.01px;
     }
 
     .slideDescription{
-        font-size: var(--slideDescription-text-size);
+        font-size: 17.34px;
     }
+
 }
 
 /* Medium */
 @media only screen and (max-width: 900px) {
     nav {
-        font-size: var(--nav-text-size);
+        font-size: 22.1px;
     }
 
     .presentationText {
-        font-size: var(--presentation-text-size);
+        font-size: 20.4px;
     }
 
     .rowText {
-        font-size: var(--row-text-size);
+        font-size: 61.2px;
     }
 
     .titleContainer p {
-        font-size: var(--titleContainer-text-size);
+        font-size: 40.8px;
     }
 
     .contactCard p {
-        font-size: var(--contactCard-text-size);
+        font-size: 30.6px;
     }
 
     .copyrightText {
-        font-size: var(--copyright-text-size); 
+        font-size: 13.6px;
+    }
+
+    .contactCards {
+        flex-direction: column;
     }
     
     .slideTitle{
-        font-size: var(--slideTitle-text-size);
+        font-size: 30.6px;
     }
 
     .slideDescription{
-        font-size: var(--slideDescription-text-size);
+        font-size: 20.4px;
     }
 }
 
@@ -530,4 +509,64 @@ footer {
     .slideDescription{
         font-size: var(--slideDescription-text-size);
     }
+}
+
+
+
+/* Mobile positioning */
+
+@media only screen and (min-width: 426px) {
+    #navigator div a {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    #navigator div a {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    #navBar {
+        display: none;
+    }
+
+    #navigator {
+        top: 0;
+        right: initial;
+        width: 100%;
+    }
+
+        #navigator div {
+            border-bottom-left-radius: initial;
+            border-left: initial;
+            border-top: initial;
+            border-top-left-radius: initial;
+            flex-direction: row;
+            height: initial;
+            padding: 15px 0;
+            width: 100%;
+        }
+    
+    #presentazione div:last-child {
+        flex-direction: column;
+    }
+
+    #presentazione div div:first-child {
+        order: 1;
+    }
+
+    #presentazione div div:last-child {
+        order: 2;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+    }
+
 }

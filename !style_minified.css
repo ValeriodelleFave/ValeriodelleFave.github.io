@@ -184,8 +184,9 @@ nav {
     border: 1px solid black;
     bottom: 2%;
     height: 50px;
+    z-index: 1000;
     position: fixed;
-    right: 5%;
+    right: 6%;
     width: 50px;
 }
 
@@ -550,6 +551,13 @@ footer {
 
 
 /* MARK: Mobile positioning */
+
+@media only screen and (max-width: 375px) {
+    .titleContainer img {
+        height: 50px;
+        width: 50px;
+    }
+}
 
 @media only screen and (min-width: 426px) {
     #navigator div a {

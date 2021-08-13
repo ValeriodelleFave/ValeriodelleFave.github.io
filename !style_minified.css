@@ -209,7 +209,7 @@ nav {
 
 .presentationImage {
     height: 600px;
-    width: 300px; /* Rivedere ratio */
+    width: 400px;
 }
 
 .presentationText {
@@ -223,12 +223,12 @@ nav {
     border-top-right-radius: 10%;
     border-top-left-radius: 10%;
     display: flex;
-    height: 450px;
+    height: 470px;
     margin: 0 10%;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    width: 800px;
+    width: 800px; /*Rate 16:9*/
     -webkit-overflow-scrolling: touch;
 }
 
@@ -357,7 +357,7 @@ footer {
             display: flex;
             flex-direction: column;
             height: 300px;
-            width: 225px;
+            width: 200px;
         }
 
         .contactCard a {
@@ -547,7 +547,7 @@ footer {
 @media only screen and (max-width: 600px) {
     .presentationImage {
         height: 300px;
-        width: 150px;
+        width: 200px;
     }
 }
 

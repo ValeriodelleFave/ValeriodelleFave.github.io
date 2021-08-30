@@ -6,11 +6,15 @@ window.addEventListener('scroll', (event) => {
     
     if (NAVBAR.clientHeight < window.scrollY) {
         NAVBAR.classList.add("hidden");
-        NAVIGATOR.classList.remove("hidden");
+        if(navigator.userAgent.toLowerCase().match(/mobile/i)) {
+            NAVIGATOR.classList.remove("hidden"); 
+        }
         BACKTOTOP.classList.remove("hidden");
     } else {
         NAVBAR.classList.remove("hidden");
-        NAVIGATOR.classList.add("hidden");
+        if(navigator.userAgent.toLowerCase().match(/mobile/i)) {
+            NAVIGATOR.classList.add("hidden"); 
+        }
         BACKTOTOP.classList.add("hidden");
     }
 

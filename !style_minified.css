@@ -256,6 +256,7 @@ nav {
 
     .slider > .slide {
         scroll-snap-align: start;
+        border-right: 1px solid #000000;
     }
 
         .slide img {

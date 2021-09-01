@@ -22,10 +22,6 @@ window.addEventListener('scroll', (event) => {
 
 window.onload = function() {
     document.getElementById("language").addEventListener("click", () => {
-        let links = document.getElementById("linksContainer").childNodes
-        if(links[0]) {
-            links[0].innerHTML = "Kebab";
-        } 
         
     })
 }

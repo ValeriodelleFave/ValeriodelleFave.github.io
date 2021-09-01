@@ -387,6 +387,19 @@ footer {
             border: 3px solid white;
             border-radius: 50%;
             width: 100%;
+            filter: grayscale(1);
+        }
+
+        @keyframes changeContactImageColour {
+              to {
+                filter: grayscale(0);
+              }
+        }
+
+        .contactCard img:hover {
+            animation-duration: 2s;
+            animation-name: changeContactImageColour;
+            animation-fill-mode: forwards;
         }
 
     .copyrightText {

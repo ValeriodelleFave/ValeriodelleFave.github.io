@@ -12,9 +12,9 @@ window.addEventListener('scroll', (event) => {
         BACKTOTOP.classList.remove("hidden");
     } else {
         NAVBAR.classList.remove("hidden");
-        if(navigator.userAgent.toLowerCase().match(/mobile/i)) {
+        // if(navigator.userAgent.toLowerCase().match(/mobile/i)) {
             NAVIGATOR.classList.add("hidden"); 
-        }
+        // }
         BACKTOTOP.classList.add("hidden");
     }
 

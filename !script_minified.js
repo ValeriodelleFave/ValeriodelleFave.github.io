@@ -20,12 +20,6 @@ window.addEventListener('scroll', (event) => {
 
 })
 
-window.onload = function() {
-    document.getElementById("language").addEventListener("click", () => {
-        
-    })
-}
-
 function backToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;

@@ -6,247 +6,232 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="HandheldFriendly" content="true">
   <meta name="description" content="This is my personal website.">
-  <link rel="icon" href="icons/in_progress.png">
-  <link rel="stylesheet" href="/roboto.css">
-  <link rel="stylesheet" href="/!style_minified.css">
-  <script src="/!script_minified.js"></script>
+  <link rel="stylesheet" href="!style_minified.css">
+  <link rel="stylesheet" href="roboto.css">
+  <script src="!script_minified.js"></script>
 </head>
 
 <body>
-  
-  <nav id="navBar" class="w-100">
-    <!-- <div id="logoContainer">
-      <img src="Images/logo_ico.png" alt="logo" srcset="" >
-    </div> -->
-    <div id="linksContainer" class="w-100">
-        <a href="#presentazione" class="active">Presentazione</a>
-        <a href="#progetti">Progetti</a>
-        <a href="#competenze">Competenze</a>
-        <a href="#hobby">Hobby</a>
-        <a href="#contatti">Contatti</a>
-    </div>
-    <!-- <div id="languageContainer" class="hidden">
-      <img id="language" src="icons/language_icon.png" alt="language" srcset="">
-    </div> -->
-  </nav>
-
-  <div id="navigator" class="hidden">
-      <div>
-        <a title="Presentazione" href="#presentazione"><img src="icons/profile_icon.png" alt="presentation link" class="w-100"></a>
-        <a title="Progetti" href="#progetti"><img src="icons/project_icon.png" alt="project link" class="w-100"></a>
-        <a title="Competenze" href="#competenze"><img src="icons/skill_icon.png" alt="skill link" class="w-100"></a>
-        <a title="Hobby" href="#hobby"><img src="icons/hobby_icon.png" alt="hobby link" class="w-100"></a>
-        <a title="Contatti" href="#contatti"><img src="icons/contact_icon.png" alt="contact link" class="w-100"></a>
-      </div>
-  </div>
-
-  <div id="backToTop" class="flex-center" onclick="backToTop()">
-    <img src="Images/arrow_up.svg" alt="torna su">
-  </div>
-
-  <main>
-    <div id="presentazione" class="w-100 paddingBottom-2">
-      <div class="titleContainer w-100 flex-center">
-        <img src="icons/profile_icon.png" alt="presentation section image">
-        <p>Presentazione</p>
-      </div>
-      <div class="flex-center">
-        <div class="paddingLeft-8 paddingRight-8">
-          <img src="Images/chisono.png" alt="profile image" class="presentationImage">
+    <section id="presentation" class="presentation">
+      <span>Ciao, sono Valerio. <br>Sono un tizio qualunque.</span>
+      <button class="startButton" onclick="start()">Click me!</button>
+    </section>
+    <nav id="menu" class="menu">
+      <div><a href="#presentation">Intro</a></div>
+      <div><a href="#about">About</a></div>
+      <div><a href="#projects">Projects</a></div>
+      <div><a href="#hobby">Hobby</a></div>
+      <div><a href="#contact">Contact</a></div>
+    </nav>
+    <section id="about" class="about">
+      <div class="title"><span>About</span></div>
+      <div class="bullets">
+        <div class="bullet">
+          <img class="b-image" src="in_progress.png" alt="">
+          <span class="b-title">Fast</span>
+          <span class="b-description">Fast load times and lag free interaction, my highest priority.</span>
         </div>
-        <div class="flex-center paddingLeft-4 paddingRight-4">
-          <p class="presentationText">
-            Ciao, mi chiamo Valerio! Sono un ragazzo romano appassionato dell'informatica, attualmente sono più improntato nello sviluppo web (questo sito ne è la prova &#128521;), 
-            però sono curioso di conoscere le altre sfaccettature di questo enorme mondo, in merito ho svolto alcuni progetti che mi hanno permesso di crescere a livello professionale. 
-            Tuttavia ho altri interessi che non riguardano strettamente l'informatica, come: il teatro, la lettura, lo sport, la musica.
-            Date un'occhiata a questo sito e fatemi sapere che ne pensate nei diversi canali comunicativi che trovate in fondo.
-            Buona visione! &#128578; 
-          </p>
+        <div class="bullet">
+          <img class="b-image" src="in_progress.png" alt="">
+          <span class="b-title">Intuitive</span>
+          <span class="b-description">Strong preference for easy to use, intuitive UX/UI.
+          </span>
+        </div>
+        <div class="bullet">
+          <img class="b-image" src="in_progress.png" alt="">
+          <span class="b-title">Responsive</span>
+          <span class="b-description">My layouts will work on any device, big or small.
+          </span>
+        </div>
+        <div class="bullet">
+          <img class="b-image" src="in_progress.png" alt="">
+          <span class="b-title">Dynamic</span>
+          <span class="b-description">Websites don't have to be static, I love making pages come to life.
+          </span>
         </div>
       </div>
-    </div>
-
-    <div class="row w-100 flex-center">
-        <p class="rowText">
-          ~ Mens sana in corpore sano ~  
-        </p>
-    </div>
-    
-    <div id="progetti" class="w-100 paddingBottom-2">
-      <div class="titleContainer flex-center">
-        <img src="icons/project_icon.png" alt="project section image">
-        <p>Progetti</p>
-      </div>
-      <div class="flex-center">
-        <div class="slider">
-          <div class="slide">
-            <img src="Images/slider_image1.jpeg" alt="first project image">
-            <div class="slideTextContainer">
-              <p class="slideTitle">Titolo</p>
-              <p class="slideDescription">Descrizione</p>
-            </div>
-          </div>
-          <div class="slide">
-            <img src="icons/in_progress.png" alt="second project image">
-            <div class="slideTextContainer">
-              <p class="slideTitle">Titolo</p>
-              <p class="slideDescription">Descrizione</p>
-            </div>
-          </div>
-          <div class="slide">
-            <img src="Images/slider_image1.jpeg" alt="third project image">
-            <div class="slideTextContainer">
-              <p class="slideTitle">Titolo</p>
-              <p class="slideDescription">Descrizione</p>
-            </div>
-          </div>      
+      <div class="skills-container">
+        <div class="specialBullet">
+          <img class="sb-image" src="in_progress.png" alt="">
+          <span class="sb-title">Who's this guy?</span>
+          <span class="sb-description">I'm a Front-End Developer for ChowNow in Los Angeles, CA. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Let's make something special.</span>
         </div>
-      </div>
-    </div>
-
-    <div class="row w-100 flex-center">
-      <p class="rowText">
-        ~ Rem tene, verba sequentur ~  
-      </p>
-    </div>
-
-    <div id="competenze" class="w-100 paddingBottom-2">
-      <div class="titleContainer flex-center">
-        <img src="icons/skill_icon.png" alt="skills section image">
-        <p>Competenze</p>
-      </div>
-      <div class="flex-center">
         <div class="skills">
           <div class="skill">
-            <img src="icons/in_progress.png" alt="first skill image">
-            <div class="skillText flex-center">
-              <p>Skill title</p>
-              <p>Livello: base</p>
-            </div>
+            <span>JavaScript</span>
+            <div class="skillBar" style="width: 100%"></div>
+            <span>100%</span>
           </div>
           <div class="skill">
-            <img src="icons/in_progress.png" alt="second skill image">
-            <div class="skillText flex-center">
-              <p>Skill title</p>
-              <p>Livello: medio</p>
-            </div>
+            <span>CSS</span>
+            <div class="skillBar" style="width: 80%"></div>
+            <span>80%</span>
           </div>
           <div class="skill">
-            <img src="icons/in_progress.png" alt="third skill image">
-            <div class="skillText flex-center">
-              <p>Skill title</p>
-              <p>Livello: avanzato</p>
-            </div>
+            <span>Swift</span>
+            <div class="skillBar" style="width: 60%"></div>
+            <span>60%</span>
           </div>
           <div class="skill">
-            <img src="icons/in_progress.png" alt="fourth skill image">
-            <div class="skillText flex-center">
-              <p>Skill title</p>
-              <p>Livello: avanzato</p>
-            </div>
+            <span>Java</span>
+            <div class="skillBar" style="width: 50%"></div>
+            <span>50%</span>
           </div>
           <div class="skill">
-            <img src="icons/in_progress.png" alt="fiveth skill image">
-            <div class="skillText flex-center">
-              <p>Skill title</p>
-              <p>Livello: medio</p>
-            </div>
+            <span>HTML</span>
+            <div class="skillBar" style="width: 30%"></div>
+            <span>30%</span>
           </div>
           <div class="skill">
-            <img src="icons/in_progress.png" alt="sixth skill image">
-            <div class="skillText flex-center">
-              <p>Skill title</p>
-              <p>Level: medium</p>
-            </div>
+            <span>Photografy</span>
+            <div class="skillBar" style="width: 70%"></div>
+            <span>70%</span>
           </div>
           <div class="skill">
-            <img src="icons/in_progress.png" alt="seventh skill image">
-            <div class="skillText flex-center">
-              <p>Skill title</p>
-              <p>Livello: medio</p>
-            </div>
+            <span>Photografy</span>
+            <div class="skillBar" style="width: 20%"></div>
+            <span>20%</span>
           </div>
           <div class="skill">
-            <img src="icons/in_progress.png" alt="eighth skill image">
-            <div class="skillText flex-center">
-              <p>Skill title</p>
-              <p>Level: advanced</p>
-            </div>
+            <span>Photografy</span>
+            <div class="skillBar" style="width: 60%"></div>
+            <span>60%</span>
           </div>
-          <div class="skill">
-            <img src="icons/in_progress.png" alt="nineth skill image">
-            <div class="skillText flex-center">
-              <p>Skill title</p>
-              <p>Livello: base</p>
-            </div>
+          
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects">
+      <div class="title"><span>Projects</span></div>
+      <div class="squares">
+        <div class="square"><img src="in_progress.png" alt="">
+          <div class="squareText">
+            <span>RAI Front-End</span>
+            <ul>
+              <span>JavaScript</span>
+              <span>CSS</span>
+            </ul>
+          </div>
+        </div>
+        <div class="square"><img src="in_progress.png" alt="">
+          <div class="squareText">
+            <span>RaiPlay iOS</span>
+            <ul>
+              <span>Swift</span>
+              <span>XSL</span>
+            </ul>
+          </div>
+        </div>
+        <div class="square"><img src="in_progress.png" alt="">
+          <div class="squareText">
+            <span>Title's project</span>
+            <ul>
+              <span>Skill</span>
+              <span>Skill</span>
+            </ul>
+          </div>
+        </div>
+        <div class="square"><img src="in_progress.png" alt="">
+          <div class="squareText">
+            <span>Title's project</span>
+            <ul>
+              <span>Skill</span>
+              <span>Skill</span>
+            </ul>
+          </div>
+        </div>
+        <div class="square"><img src="in_progress.png" alt="">
+          <div class="squareText">
+            <span>Title's project</span>
+            <ul>
+              <span>Skill</span>
+              <span>Skill</span>
+            </ul>
+          </div>
+        </div>
+        <div class="square"><img src="in_progress.png" alt="">
+          <div class="squareText">
+            <span>Title's project</span>
+            <ul>
+              <span>Skill</span>
+              <span>Skill</span>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="row w-100 flex-center">
-      <p class="rowText">
-        ~ Re opitulandum, non verbis ~  
-      </p>
-    </div>
-
-    <div id="hobby" class="w-100 paddingBottom-2">
-      <div class="titleContainer flex-center">
-        <img src="icons/hobby_icon.png" alt="hobby section image">
-        <p>Hobby</p>
-      </div>
-      <div class="flex-center">
-        <div class="slider">
-          <div class="slide">
-            <img src="Images/slider_image1.jpeg" alt="first project image">
-            <div class="slideTextContainer">
-              <p class="slideTitle">Titolo</p>
-            </div>
+    </section>
+    <section id="hobby" class="hobby">
+      <div class="title"><span>Hobby</span></div>
+      <div class="squares">
+        <div class="square"><img src="in_progress.png" alt="">
+          <div class="squareText">
+            <span>Teatro - Recitazione</span>
+            <ul>
+              <span>Nuovo Teatro San Paolo</span>
+            </ul>
           </div>
-          <div class="slide">
-            <img src="icons/in_progress.png" alt="second project image">
-            <div class="slideTextContainer">
-              <p class="slideTitle">Titolo</p>
-            </div>
+        </div>
+        <div class="square"><img src="in_progress.png" alt="">
+          <div class="squareText">
+            <span>Fitness</span>
+            <ul>
+              <span>Calisthenics</span>
+              <span>Powerlifting</span>
+              <span>Bodybuilding</span>
+            </ul>
           </div>
-          <div class="slide">
-            <img src="Images/slider_image1.jpeg" alt="third project image">
-            <div class="slideTextContainer">
-              <p class="slideTitle">Titolo</p>
-            </div>
-          </div>      
+        </div>
+        <div class="square"><img src="in_progress.png" alt="">
+          <div class="squareText">
+            <span>Title's hobby</span>
+            <ul>
+              <span>Skill</span>
+              <span>Skill</span>
+            </ul>
+          </div>
+        </div>
+        <div class="square"><img src="in_progress.png" alt="">
+          <div class="squareText">
+            <span>Title's hobby</span>
+            <ul>
+              <span>Skill</span>
+              <span>Skill</span>
+            </ul>
+          </div>
+        </div>
+        <div class="square"><img src="in_progress.png" alt="">
+          <div class="squareText">
+            <span>Title's hobby</span>
+            <ul>
+              <span>Skill</span>
+              <span>Skill</span>
+            </ul>
+          </div>
+        </div>
+        <div class="square"><img src="in_progress.png" alt="">
+          <div class="squareText">
+            <span>Title's hobby</span>
+            <ul>
+              <span>Skill</span>
+              <span>Skill</span>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
-
-  <footer id="contatti" class="w-100">
-    <div class="titleContainer flex-center">
-      <p>Contatti</p>
-    </div>
-    <div class="flex-center contactCards">
-      <div class="contactCard">
-        <a class="flex-center" href="mailto:valerio.dellefave00@gmail.com"><img src="icons/Social/email_icon.png" alt="email contact"></a>
+    </section>
+    <section id="contact" class="contact">
+      <div class="backToTop" onclick="backToTop()">↑</div>
+      <div class="title"><span>Contact</span></div>
+      <div class="contacts">
+        <div class="contactItem"><img src="in_progress.png" alt=""></div>
+        <div class="contactItem"><img src="in_progress.png" alt=""></div>
+        <div class="contactItem"><img src="in_progress.png" alt=""></div>
+        <div class="contactItem"><img src="in_progress.png" alt=""></div>
+        <div class="contactItem"><img src="in_progress.png" alt=""></div>
       </div>
-      <div class="contactCard">
-        <a class="flex-center" href="https://www.facebook.com/valerio.dellefave"><img src="icons/Social/facebook_icon.png" alt="facebook contact"></a>
-      </div>
-      <div class="contactCard">
-        <a class="flex-center" href="https://github.com/ValeriodelleFave"><img src="icons/Social/github_icon.png" alt="github contact"></a>
-      </div>
-      <div class="contactCard">
-        <a class="flex-center" href="https://www.instagram.com/valerio_dellefave/"><img src="icons/Social/instagram_icon.png" alt="instagram contact"></a>
-      </div>
-      <div class="contactCard">
-        <a class="flex-center" href="https://www.linkedin.com/in/valerio-delle-fave/"><img src="icons/Social/linkedin_icon.png" alt="linkedin contact"></a>
-      </div>
-      <div class="contactCard">
-        <a class="flex-center" href="https://twitter.com/ValerioFave"><img src="icons/Social/twitter_icon.png" alt="twitter contact"></a>
-      </div>
-    </div>
-    <p class="copyrightText">Copyright © Valerio delle Fave. All Rights Reserved.</p>
-  </footer>
-
+    </section>
+    <footer>
+      <span>Copyright © Valerio delle Fave. All Rights Reserved.</span>
+    </footer>
 </body>
-
 </html>

@@ -142,6 +142,14 @@ body {
     margin: 0 0 1vh 0;
 }
 
+.s-title {
+    font-size: 24pt;
+}
+
+.s-description {
+    font-size: 16pt;
+}
+
 .skillBar {
     background-color: #F76902;
     height: inherit;
@@ -219,8 +227,8 @@ section {
 }
 
 .squares {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 0 0 150px 0;
 }
@@ -288,10 +296,15 @@ section {
     width: 6vh;
 }
 
+.backToTop img {
+    height: inherit;
+    width: inherit;
+}
+
 .contact {
     align-items: center;
-    background-color: #393949;
     background-color: #f5f5f5;
+    background-color: #393949;
     display: flex;
     flex-direction: column; 
     position: relative;
@@ -316,7 +329,7 @@ section {
 }
 
 footer {
-    background-color: #393941;
+    background-color: #393945;
     color: #F76902;
     padding: 40px 0;
 }

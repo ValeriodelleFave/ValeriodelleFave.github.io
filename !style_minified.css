@@ -38,8 +38,13 @@ body {
 }
 
 .presentation span {
-    color: seagreen;
+    color: #F76902;
     font-size: 48px;
+    font-weight: 300;
+}
+
+.presentation span b {
+    font-weight: 900;
 }
 
 .startButton {
@@ -327,26 +332,14 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #393910;
-}
-
-svg {
-    height: 100px;
-    width: 100px;
-    border-radius: 10%;
-}
-
-.contactItem:hover {
     background-color: #FFF;
+    border-radius: 50%;
 }
 
-.icon:hover  {
-    fill: aqua;
-}
-
-
-.iconBorder:hover{
-    stroke: aqua;
+.contactItem img {
+    border-radius: 50%;
+    height: inherit;
+    width: inherit;
 }
 
 

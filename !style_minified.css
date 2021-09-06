@@ -226,6 +226,9 @@ section {
     flex-direction: column; 
 }
 
+    /* Se con griglia */
+    /* display: grid; */
+    /* grid-template-columns: auto auto auto; */
 .squares {
     display: flex;
     flex-wrap: wrap;

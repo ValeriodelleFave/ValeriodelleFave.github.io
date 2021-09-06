@@ -317,19 +317,38 @@ section {
     align-items: center;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .contactItem {
-    border: 1px solid black;
     height: 10vh;
     margin: 0 20px;
     width: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #393910;
 }
 
-.contactItem img {
-    height: inherit;
-    width: inherit;
+svg {
+    height: 100px;
+    width: 100px;
+    border-radius: 10%;
 }
+
+.contactItem:hover {
+    background-color: #FFF;
+}
+
+.icon:hover  {
+    fill: aqua;
+}
+
+
+.iconBorder:hover{
+    stroke: aqua;
+}
+
 
 footer {
     background-color: #393945;

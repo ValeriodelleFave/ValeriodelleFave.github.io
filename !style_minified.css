@@ -366,6 +366,18 @@ section {
 
 
 /* Mobile */
+
+@media only screen and (max-width: 1000px) {
+    .skills-specialBullet-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills {
+        margin-top: 50px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .bullets, .skills-specialBullet-container, .squares, .contactsContainer {
         display: flex;

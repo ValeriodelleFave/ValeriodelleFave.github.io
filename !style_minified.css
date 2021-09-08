@@ -66,6 +66,10 @@ body {
         color: #F76902;
     }
 
+    .active {
+        color: #F76902 !important;
+    }
+
 
 section {
     margin-bottom: 1vh;

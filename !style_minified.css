@@ -22,20 +22,32 @@ body {
     flex-direction: column;
     height: calc(100vh + 53px);
     justify-content: center;
-    background-color: #ffffe7;
+    background-color: #3f3a3a;
 }
 
     .presentation span {
-        color: #F76902;
+        color: #FFF;
     }
 
     .presentation span b {
+        color: #F76902;
         font-weight: 900;
     }
 
 .startButton {
-    cursor: cell;
+    background-color: #3f3a3a;
+    border: 3px solid #c55200;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 40px;
+    height: 75px;
+    margin-top: 25px;
+    padding: 10px;
 }
+
+    .startButton:hover {
+        background-color: #F76902;
+    }
 
 .menu {
     align-items: center;

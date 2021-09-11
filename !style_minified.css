@@ -1,13 +1,4 @@
-/* 
-    16px = 1.2vh
-    24px = 1.8vh
-    40px = 3.0vh
-
-    color: #F76902;
-    color: #000000;
-    color:  #C4C4C4;
-    color: #393939;
-*/
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 body {
     font-family: "Roboto";
@@ -27,6 +18,8 @@ body {
 
     .presentation span {
         color: #FFF;
+        animation-duration: 3.0s;
+        animation-name: fadeIn;
     }
 
     .presentation span b {
@@ -35,12 +28,14 @@ body {
     }
 
 .startButton {
+    animation-name: fadeIn;
+    animation-duration: 4.5s;
     background-color: #3f3a3a;
-    border: 3px solid #c55200;
+    border: 3px solid #F76902;
+    border-radius: 15%;
     color: #FFF;
     cursor: pointer;
     font-size: 40px;
-    height: 75px;
     margin-top: 25px;
     padding: 10px;
 }

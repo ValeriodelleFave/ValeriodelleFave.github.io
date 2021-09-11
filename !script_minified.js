@@ -1,7 +1,7 @@
+var presentationY, aboutY, projectsY, hobbyY, contactsY;  
+
 function start() {
-
     let positionY = document.getElementById("about").getBoundingClientRect().y;
-
     document.body.scrollTop = positionY;
     document.documentElement.scrollTop = positionY;
 }
@@ -9,6 +9,14 @@ function start() {
 function backToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+}
+
+window.onload = function () {
+    presentationY = document.getElementById("presentation").getBoundingClientRect().y;
+    aboutY        = document.getElementById("about").getBoundingClientRect().y;
+    projectsY     = document.getElementById("projects").getBoundingClientRect().y;
+    hobbyY        = document.getElementById("hobby").getBoundingClientRect().y;
+    contactsY     = document.getElementById("contacts").getBoundingClientRect().y;
 }
 
 function resetActiveLink() {
@@ -20,30 +28,21 @@ function resetActiveLink() {
 }
 
 function checkScrolling() {
-    let presentationY = document.getElementById("presentation").getBoundingClientRect().y,
-        aboutY        = document.getElementById("about").getBoundingClientRect().y,
-        projectsY     = document.getElementById("projects").getBoundingClientRect().y,
-        hobbyY        = document.getElementById("hobby").getBoundingClientRect().y,
-        contactsY     = document.getElementById("contacts").getBoundingClientRect().y;
+    let scrollTop = document.documentElement.scrollTop;
 
     resetActiveLink()
 
-    if (presentationY >= 0 && presentationY <= aboutY) {
+    if (scrollTop >= 0 && scrollTop <= aboutY) {
         document.getElementById("presentationLink").classList.add("active");
-    } else if (aboutY >= 0 && aboutY <= projectsY) {
+    } else if (scrollTop >= aboutY && scrollTop <= projectsY) {
         document.getElementById("aboutLink").classList.add("active");
-    } else if (projectsY >= 0 && projectsY <= hobbyY) {
+    } else if (scrollTop >= projectsY && scrollTop <= hobbyY) {
         document.getElementById("projectsLink").classList.add("active");
-    } else if (hobbyY >= 0 && hobbyY <= contactsY) {
+    } else if (scrollTop >= hobbyY && scrollTop <= contactsY) {
         document.getElementById("hobbyLink").classList.add("active");
-    } else if (contactsY >= 0) {
+    } else if (scrollTop >= contactsY) {
         document.getElementById("contactsLink").classList.add("active");
-    } else {
-
     }
-
 }
-
-
 
 document.addEventListener("scroll", checkScrolling, false);

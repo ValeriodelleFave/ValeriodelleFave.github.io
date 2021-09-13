@@ -16,13 +16,13 @@ body {
     background-color: #3f3a3a;
 }
 
-    .presentation span {
+    .presentation h1 {
         color: #FFF;
         animation-duration: 3.0s;
         animation-name: fadeIn;
     }
 
-    .presentation span b {
+    .presentation h1 b {
         color: #F76902;
         font-weight: 900;
     }
@@ -376,7 +376,7 @@ section {
 
     /* All Texts */
 
-    .presentation span b, .sectionTitle, .sb-title {
+    .presentation h1 b, .sectionTitle, .sb-title {
         font-weight: 700;
     }
     
@@ -385,7 +385,7 @@ section {
         letter-spacing: 0.09em;
     }
     
-    .presentation span, .menu,  .b-description, .squareTextContainer div span, .sb-description, .copyrightText {
+    .presentation h1, .menu,  .b-description, .squareTextContainer div span, .sb-description, .copyrightText {
         font-weight: 500;
     }
 
@@ -420,7 +420,7 @@ section {
 @media only screen and (min-width: 1024px) {
     
 
-    .presentation span, .sectionTitle {
+    .presentation h1, .sectionTitle {
         font-size: 48px;
     }
 
@@ -440,7 +440,7 @@ section {
 
 
 @media only screen and (max-width: 1023px) {
-    .presentation span, .sectionTitle {
+    .presentation h1, .sectionTitle {
         font-size: 46px;
     }
 
@@ -458,7 +458,7 @@ section {
 }
 
 @media only screen and (max-width: 767px) {
-    .presentation span, .sectionTitle {
+    .presentation h1, .sectionTitle {
         font-size: 44px;
     }
 

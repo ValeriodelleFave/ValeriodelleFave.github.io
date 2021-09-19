@@ -91,6 +91,7 @@ section {
     border-bottom: 3px solid grey;
     color: #F76902;
     margin: 175px 0;
+    text-transform: uppercase;
 }
 
 /* About Section */

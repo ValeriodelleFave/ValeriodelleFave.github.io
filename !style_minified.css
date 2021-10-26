@@ -131,7 +131,6 @@ section {
             }
 
             .b-image {
-                border-radius: 50%;
                 height: 100px;
                 width: 100px;
             }
@@ -410,6 +409,15 @@ section {
 
     .skills {
         margin-top: 50px;
+    }
+    .contact {
+        filter: initial;
+        animation: initial;
+    }
+
+    .contact:hover {
+        animation: initial;
+        animation-fill-mode: initial;
     }
 }
 

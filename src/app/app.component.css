@@ -1,0 +1,35 @@
+.presentation {
+    height: calc(100vh + 53px);
+    background-color: #3f3a3a;
+}
+
+.presentation h1 {
+    color: #FFF;
+}
+
+mat-nav-list {
+    position: sticky !important;
+}
+
+mat-list-item {
+    width: auto !important;
+}
+
+.bullet {
+    max-width: 250px;
+}
+
+.bullet img {
+    height: 100px;
+    width: 100px;
+}
+
+.special-bullet img {
+    height: 300px;
+    width: 250px;
+}
+
+.square img {
+    height: 300px;
+    width: 300px;
+}

@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0;
+    padding: 0 !important;
+}
+
+.fixedMenu {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+.left-align-text { text-align: left; }
+.centered-text { text-align: center; }
+.right-align-text { text-align: right; }

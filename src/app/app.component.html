@@ -13,7 +13,7 @@
   <div class="centered-text"><span>About</span></div>
   <div class="col-md-10 offset-md-1">
     <div fxLayout="row" fxLayoutAlign="space-evenly start">
-      <div *ngFor="let bullet of bullets" fxLayout="column" fxLayoutAlign="center center" class="bullet">  
+      <div *ngFor="let bullet of bullets" fxLayout="column" fxLayoutAlign="center center" class="bullet">
         <img loading="lazy" src="{{bullet.image}}" alt="{{bullet.image}} image" title="speed image">
         <span class="centered-text">{{bullet.title}}</span>
         <span>{{bullet.description}}</span>
@@ -36,27 +36,27 @@
   </div>
 </section>
 <hr>
-<section id="projects" class="projects">
+<div id="projects" class="projects">
   <div class="sectionTitle centered-text"><span>Projects</span></div>
-  <div class="squares">
-    <div class="square" *ngFor="let project of projects">
-      <img loading="lazy" src="{{project.image}}" alt="{{project.title}} project" title="{{project.title}} project">
-      <div class="squareTextContainer">
-        <span class="s-title">{{project.title}}</span>
-        <div *ngFor="let language of project.languages">
-          <span>{{language}}</span>
-        </div>
+  <div class="col-md-10 offset-md-1" fxLayout="row" fxLayoutAlign="space-evenly start">
+    <div class="square view overlay" *ngFor="let project of projects">
+      <img class="img-fluid" loading="lazy" src="{{project.image}}" alt="{{project.title}} project" title="{{project.title}} project">
+      <div class="mask flex-center rgba-red-strong">
+        <ul *ngIf="project.languages">
+          <li *ngFor="let language of project.languages">{{language}}</li>
+        </ul>
       </div>
     </div>
   </div>
-</section>
+</div>
 <hr>
+
 <section id="hobby" class="hobby">
   <div class="sectionTitle centered-text"><span>Hobby</span></div>
-  <div class="squares">
-    <div class="square" *ngFor="let hobby of hobbies">
-      <img loading="lazy" src="{{hobby.image}}" alt="{{hobby.title}}" title="{{hobby.title}}">
-      <div class="squareTextContainer">
+  <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
+    <div class="square view overlay" *ngFor="let hobby of hobbies">
+      <img class="img-fluid" loading="lazy" src="{{hobby.image}}" alt="{{hobby.title}}" title="{{hobby.title}}">
+      <div class="mask flex-center rgba-red-strong">
         <span class="s-title">{{hobby.title}}</span>
       </div>
     </div>
@@ -64,13 +64,11 @@
 </section>
 <hr>
 <section id="contacts" class="contacts">
-  <div class="backToTop" onclick="backToTop()"><img loading="lazy" src="arrowup.png" alt="back to top" title="back to top" srcset=""></div>
-  
   <div class="sectionTitle centered-text"><span>Contacts</span></div>
-  <div class="contactsContainer">
+  <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
     <div class="contact" *ngFor="let contact of contacts">
       <a href="{{contact.url}}" title="Send me a mail">
-        <img loading="lazy" src="{{contact.icon}}" alt="{{contact.type}}" title="{{contact.type}}" srcset="">
+        <img class="img-fluid" loading="lazy" src="{{contact.icon}}" alt="{{contact.type}}" title="{{contact.type}}" srcset="">
       </a>
     </div>
   </div>

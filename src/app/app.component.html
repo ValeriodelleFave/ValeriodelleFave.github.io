@@ -8,71 +8,81 @@
     <a href="{{menuItem.link}}">{{menuItem.name}}</a>
   </mat-list-item>
 </mat-nav-list>
+
 <hr>
+
 <section id="about">
-  <div class="centered-text"><span>About</span></div>
+  <p class="centered-text" style="width: 100%;">About</p>
   <div class="col-md-10 offset-md-1">
     <div fxLayout="row" fxLayoutAlign="space-evenly start">
-      <div *ngFor="let bullet of bullets" fxLayout="column" fxLayoutAlign="center center" class="bullet">
+      <figure *ngFor="let bullet of bullets" fxLayout="column" fxLayoutAlign="center center" class="bullet">
         <img loading="lazy" src="{{bullet.image}}" alt="{{bullet.image}} image" title="speed image">
-        <span class="centered-text">{{bullet.title}}</span>
-        <span>{{bullet.description}}</span>
-      </div>
+        <figcaption class="centered-text">
+          <b>{{bullet.title}}</b>
+          <blockquote>{{bullet.description}}</blockquote>
+        </figcaption>
+      </figure>
     </div>
     <hr>
     <div>
-      <div fxLayout="column" fxFlex="50" class="special-bullet">
+      <figure fxLayout="column" fxFlex="50" class="special-bullet">
         <img class="col-md-8 offset-md-4" loading="lazy" src="{{specialBullet.image}}" alt="me image" title="me image">
         <span class="col-md-8 offset-md-2 centered-text">{{specialBullet.title}}</span>
         <span class="col-md-8 offset-md-2">{{specialBullet.description}}</span>
-      </div>
-      <div fxLayout="column" fxFlex="50">      <!-- Skills -->
-        <div *ngFor="let skill of skills" style="position: relative;">
-          <span>{{skill.name}}</span> <!-- TODO: Progress bar -->
-          <div class="progress-bar bg-success" role="progressbar" style="width: 30%;"></div><span>{{skill.value}}%</span>
+      </figure>
+      <div fxLayout="column" fxFlex="50">
+        <div *ngFor="let skill of skills" class="progress">
+          <p>{{skill.name}}</p>
+          <div class="progress-bar" role="progressbar"[ngStyle]="{'width': skill.value + '%'}">{{skill.value}}%</div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <hr>
+
 <div id="projects" class="projects">
-  <div class="sectionTitle centered-text"><span>Projects</span></div>
+  <p class="centered-text" style="width: 100%;">Projects</p>
   <div class="col-md-10 offset-md-1" fxLayout="row" fxLayoutAlign="space-evenly start">
-    <div class="square view overlay" *ngFor="let project of projects">
+    <figure class="square view overlay" *ngFor="let project of projects">
       <img class="img-fluid" loading="lazy" src="{{project.image}}" alt="{{project.title}} project" title="{{project.title}} project">
       <div class="mask flex-center rgba-red-strong">
         <ul *ngIf="project.languages">
           <li *ngFor="let language of project.languages">{{language}}</li>
         </ul>
       </div>
-    </div>
+    </figure>
   </div>
 </div>
+
 <hr>
 
 <section id="hobby" class="hobby">
-  <div class="sectionTitle centered-text"><span>Hobby</span></div>
+  <p class="centered-text" style="width: 100%;">Hobby</p>
   <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
-    <div class="square view overlay" *ngFor="let hobby of hobbies">
+    <figure class="square view overlay" *ngFor="let hobby of hobbies">
       <img class="img-fluid" loading="lazy" src="{{hobby.image}}" alt="{{hobby.title}}" title="{{hobby.title}}">
       <div class="mask flex-center rgba-red-strong">
-        <span class="s-title">{{hobby.title}}</span>
+        <figcaption>{{hobby.title}}</figcaption>
       </div>
-    </div>
+    </figure>
   </div>
 </section>
+
 <hr>
+
 <section id="contacts" class="contacts">
-  <div class="sectionTitle centered-text"><span>Contacts</span></div>
+  <p class="centered-text" style="width: 100%;">Contacts</p>
   <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
-    <div class="contact" *ngFor="let contact of contacts">
+    <figure class="contact" *ngFor="let contact of contacts">
       <a href="{{contact.url}}" title="Send me a mail">
         <img class="img-fluid" loading="lazy" src="{{contact.icon}}" alt="{{contact.type}}" title="{{contact.type}}" srcset="">
       </a>
-    </div>
+    </figure>
   </div>
-  <span class="copyrightText">{{copyrightText}}</span>
 </section>
+
+<small>{{copyrightText}}</small>
 
 <router-outlet></router-outlet>

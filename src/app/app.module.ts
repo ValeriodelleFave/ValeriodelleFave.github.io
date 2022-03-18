@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 // Material
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from "@angular/material/list";
+import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MatListModule } from "@angular/material/list";
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

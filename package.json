@@ -1,5 +1,5 @@
 {
-  "name": "ValeriodelleFave.github.io",
+  "name": "valeriodellefave-portfolio",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "buildApp": "ng build --prod --base-href 'https://valeriodellefave.github.io/'",
-    "deployApp": "npx angular-cli-ghpages --dir=dist/ValeriodelleFave.github.io"
+    "deployApp": "npx angular-cli-master --dir=dist/docs"
   },
   "private": true,
   "dependencies": {

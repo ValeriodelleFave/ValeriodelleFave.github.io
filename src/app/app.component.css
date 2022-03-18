@@ -93,3 +93,8 @@ mat-list-item {
 .rgba-red-strong {
   background-color: rgba(244,67,54,0.7);
 }
+
+.progress {
+  height: 2em !important;
+  margin-bottom: 1em !important;
+}

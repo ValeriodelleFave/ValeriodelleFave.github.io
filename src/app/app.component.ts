@@ -184,4 +184,7 @@ export class AppComponent {
     },
   ];
   copyrightText = "Copyright © Valerio delle Fave. All Rights Reserved.";
+
+
 }
+

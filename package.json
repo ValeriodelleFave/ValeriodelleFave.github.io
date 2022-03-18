@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "buildApp": "ng build --prod --base-href 'https://valeriodellefave.github.io/'",
-    "deployApp": "npx angular-cli-ghpages --dir=dist/valeriodellefave-portfolio"
+    "deployApp": "npx angular-cli-master --dir=dist/docs"
   },
   "private": true,
   "dependencies": {

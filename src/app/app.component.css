@@ -9,6 +9,7 @@
 
 mat-nav-list {
     position: sticky !important;
+    top: 0;
 }
 
 mat-list-item {

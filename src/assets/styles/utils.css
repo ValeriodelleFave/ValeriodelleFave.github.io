@@ -1,0 +1,29 @@
+.pr-5 { padding-right: 5px; }
+.left-align-text { text-align: left; }
+.centered-text { text-align: center; }
+.right-align-text { text-align: right; }
+.white-text { color: #fff; }
+.column-direction { flex-direction: column; }
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.flex-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+}
+  
+body {
+    margin: 0;
+    padding: 0 !important;
+    font-family: Roboto;
+}

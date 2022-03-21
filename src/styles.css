@@ -1,74 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-
-body {
-    margin: 0;
-    padding: 0 !important;
-    font-family: Roboto;
-}
-
-.fixedMenu {
-    position: fixed;
-    top: 0;
-    z-index: 100;
-}
-.left-align-text { text-align: left; }
-.centered-text { text-align: center; }
-.right-align-text { text-align: right; }
-.white-text { color: #fff; }
-
-.column-direction { flex-direction: column; }
-
-section p {
-    font-size: large;
-}
-
-
-.presentation {
-    height: calc(100vh + 53px);
-    background-color: #3f3a3a;
-}
-
-.presentation h1 {
-    color: #FFF;
-}
-
-mat-nav-list {
-    position: sticky !important;
-    top: 0;
-}
-
-mat-list-item {
-    width: auto !important;
-}
-
-.bullet {
-    max-width: 250px;
-}
-
-.bullet img {
-    height: 100px;
-    width: 100px;
-}
-
-.special-bullet img {
-    height: 300px;
-    width: 250px;
-}
-
-.square {
-    width: 200px;
-    height: 200px;
-}
-
-.contact {
-    width: 75px;
-    height: 75px;
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
+@import url("./assets/fonts/roboto.css");
+@import url("./assets/styles/utils.css");
+@import url("./assets/styles/navigation.css");
+@import url("./assets/styles/presentation.css");
+@import url("./assets/styles/section.css");
+@import url("./assets/styles/contact.css");
 
 .view {
   position: relative;
@@ -103,19 +39,6 @@ mat-list-item {
   opacity: 1;
 }
 
-.flex-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 100%;
-}
-
 .rgba-red-strong {
   background-color: rgba(0, 0, 0, 0.7);
 }
@@ -124,7 +47,6 @@ mat-list-item {
   height: 2em !important;
   margin-bottom: 1em !important;
 }
-
 
 @media screen and (max-width: 768px) {
     .bullets {

@@ -9,10 +9,8 @@
   </mat-list-item>
 </mat-nav-list>
 
-<hr>
-
 <section id="about">
-  <p class="centered-text" style="width: 100%;">About</p>
+  <p class="centered-text section-title" style="width: 100%;">About</p>
   <div class="col-md-10 offset-md-1">
     <div fxLayout="row" fxLayoutAlign="space-evenly start" class="bullets">
       <figure *ngFor="let bullet of bullets" fxLayout="column" fxLayoutAlign="center center" class="bullet">
@@ -23,17 +21,17 @@
         </figcaption>
       </figure>
     </div>
-    <hr>
+  
     <div class="specialBullet-skills">
-      <figure fxLayout="column" class="special-bullet">
-        <img class="col-md-8 offset-md-4" loading="lazy" src="{{specialBullet.image}}" alt="me image" title="me image">
-        <span class="col-md-8 offset-md-2 centered-text">{{specialBullet.title}}</span>
-        <span class="col-md-8 offset-md-2">{{specialBullet.description}}</span>
+      <figure fxLayout="column center" class="special-bullet">
+        <img class="img-fluid" loading="lazy" src="{{specialBullet.image}}" alt="me image" title="me image">
+        <span class=" centered-text">{{specialBullet.title}}</span>
+        <span>{{specialBullet.description}}</span>
       </figure>
-      <div fxLayout="column">
+      <div fxLayout="column" fxLayoutAlign="center none">
         <div *ngFor="let skill of skills" class="progress">
-          <p>{{skill.name}}</p>
-          <div class="progress-bar" role="progressbar"[ngStyle]="{'width': skill.value + '%'}">{{skill.value}}%</div>
+          <p class="pr-5">{{skill.name}}</p>
+          <div class="progress-bar" role="progressbar" [ngStyle]="{'width': skill.value + '%'}">{{skill.value}}%</div>
         </div>
       </div>
     </div>
@@ -43,8 +41,8 @@
 <hr>
 
 <div id="projects" class="projects">
-  <p class="centered-text" style="width: 100%;">Projects</p>
-  <div class="col-md-10 offset-md-1" fxLayout="row" fxLayoutAlign="space-evenly start">
+  <p class="centered-text section-title" style="width: 100%;">Projects</p>
+  <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
     <figure class="square view overlay" *ngFor="let project of projects">
       <img class="img-fluid" loading="lazy" src="{{project.image}}" alt="{{project.title}} project" title="{{project.title}} project">
       <div class="mask flex-center rgba-red-strong white-text column-direction">
@@ -57,7 +55,7 @@
 <hr>
 
 <section id="hobby" class="hobby">
-  <p class="centered-text" style="width: 100%;">Hobby</p>
+  <p class="centered-text section-title" style="width: 100%;">Hobby</p>
   <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
     <figure class="square view overlay" *ngFor="let hobby of hobbies">
       <img class="img-fluid" loading="lazy" src="{{hobby.image}}" alt="{{hobby.title}}" title="{{hobby.title}}">
@@ -71,7 +69,7 @@
 <hr>
 
 <section id="contacts" class="contacts">
-  <p class="centered-text" style="width: 100%;">Contacts</p>
+  <p class="centered-text section-title" style="width: 100%;">Contacts</p>
   <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
     <figure class="contact" *ngFor="let contact of contacts">
       <a href="{{contact.url}}" title="Send me a mail">
@@ -81,6 +79,8 @@
   </div>
 </section>
 
-<small>{{copyrightText}}</small>
+<footer>
+  <small>{{copyrightText}}</small>
+</footer>
 
 <router-outlet></router-outlet>

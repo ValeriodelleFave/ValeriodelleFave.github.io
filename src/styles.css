@@ -1,25 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("./assets/fonts/roboto.css");
+@import url("./assets/styles/utils.css");
+@import url("./assets/styles/navigation.css");
+@import url("./assets/styles/presentation.css");
+@import url("./assets/styles/section.css");
+@import url("./assets/styles/contact.css");
 
-body {
-    margin: 0;
-    padding: 0 !important;
-    font-family: Roboto;
+.view {
+  position: relative;
+  overflow: hidden;
+  cursor: default;
 }
 
-.fixedMenu {
-    position: fixed;
-    top: 0;
-    z-index: 100;
+.view img {
+  position: relative;
+  display: block;
 }
-.left-align-text { text-align: left; }
-.centered-text { text-align: center; }
-.right-align-text { text-align: right; }
-.white-text { color: #fff; }
 
-.column-direction { flex-direction: column; }
+.view .mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-attachment: fixed;
+}
 
-section p {
-    font-size: large;
+.overlay .mask {
+  opacity: 0;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.overlay .mask:hover {
+  opacity: 1;
+}
+
+.rgba-red-strong {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.progress {
+  height: 2em !important;
+  margin-bottom: 1em !important;
 }
 
 @media screen and (max-width: 768px) {

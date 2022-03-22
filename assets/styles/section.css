@@ -15,6 +15,15 @@ section p {
     align-items: center;
 }
 
+
+.special-bullet-title {
+  font-size: large;
+}
+
+.special-bullet-description {
+  width: 400px;
+}
+
 .special-bullet img {
     height: 300px;
     width: 250px;
@@ -33,5 +42,6 @@ section p {
 
 .section-title {
     padding: 0.5em 0;
-    font-size: large;
+    font-size: x-large;
+    font-weight: bold;
 }

@@ -1,0 +1,23 @@
+@media only screen and (max-device-width: 640px) {
+  /* Styles */
+
+}
+
+@media only screen and (max-device-width: 768px) {
+  /* Styles */
+  .bullets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .specialBullet-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

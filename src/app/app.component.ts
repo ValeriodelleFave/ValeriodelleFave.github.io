@@ -54,7 +54,7 @@ export class AppComponent {
       title: "Curioso",
       description: "Scoprire nuovi approcci metodologici.",
       image: "../assets/images/bullets/curious.png"
-    },
+    }
   ];
   skills = [
     {
@@ -84,7 +84,7 @@ export class AppComponent {
     {
       name: "SQL",
       value: 40
-    },
+    }
   ];
   projects = [
     {

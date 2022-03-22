@@ -1,9 +1,9 @@
-<section id="presentation" class="presentation" fxLayout="column" fxLayoutAlign="center center">
+<section class="presentation" fxLayout="column" fxLayoutAlign="center center" id="presentation">
   <h1 [innerHTML]="presentationTitle"></h1>
   <button class="startButton btn btn-outline-primary btn-lg" onclick="start()">Iniziamo!</button>
 </section>
 
-<mat-nav-list role="navigation" fxLayout="row" fxLayoutAlign="space-evenly center">
+<mat-nav-list fxLayout="row" fxLayoutAlign="space-evenly center" role="navigation">
   <mat-list-item *ngFor="let menuItem of menuItems" fxLayoutAlign="center center">
     <a href="{{menuItem.link}}">{{menuItem.name}}</a>
   </mat-list-item>
@@ -12,26 +12,26 @@
 <section id="about">
   <p class="centered-text section-title" style="width: 100%;">About</p>
   <div class="col-md-10 offset-md-1">
-    <div fxLayout="row" fxLayoutAlign="space-evenly start" class="bullets">
-      <figure *ngFor="let bullet of bullets" fxLayout="column" fxLayoutAlign="center center" class="bullet">
-        <img loading="lazy" src="{{bullet.image}}" alt="{{bullet.image}} image" title="speed image">
+    <div class="bullets" fxLayout="row" fxLayoutAlign="space-evenly start">
+      <figure *ngFor="let bullet of bullets"  class="bullet" fxLayout="column" fxLayoutAlign="center center">
+        <img alt="{{bullet.image}}" loading="lazy" src="{{bullet.image}}" title="speed image">
         <figcaption class="centered-text">
           <b>{{bullet.title}}</b>
           <blockquote>{{bullet.description}}</blockquote>
         </figcaption>
       </figure>
     </div>
-  
+
     <div class="specialBullet-skills">
-      <figure fxLayout="column center" class="special-bullet">
-        <img class="img-fluid" loading="lazy" src="{{specialBullet.image}}" alt="me image" title="me image">
+      <figure class="special-bullet" fxLayout="column center">
+        <img  alt="me image" class="img-fluid" loading="lazy" src="{{specialBullet.image}}" title="me image">
         <span class=" centered-text">{{specialBullet.title}}</span>
         <span>{{specialBullet.description}}</span>
       </figure>
       <div fxLayout="column" fxLayoutAlign="center none">
         <div *ngFor="let skill of skills" class="progress">
           <p class="pr-5">{{skill.name}}</p>
-          <div class="progress-bar" role="progressbar" [ngStyle]="{'width': skill.value + '%'}">{{skill.value}}%</div>
+          <div [ngStyle]="{'width': skill.value + '%'}" class="progress-bar" role="progressbar">{{skill.value}}%</div>
         </div>
       </div>
     </div>
@@ -40,11 +40,11 @@
 
 <hr>
 
-<div id="projects" class="projects">
+<div class="projects" id="projects">
   <p class="centered-text section-title" style="width: 100%;">Projects</p>
-  <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
-    <figure class="square view overlay" *ngFor="let project of projects">
-      <img class="img-fluid" loading="lazy" src="{{project.image}}" alt="{{project.title}} project" title="{{project.title}} project">
+  <div class="col-md-10 offset-md-1 container">
+    <figure *ngFor="let project of projects" class="square view overlay">
+      <img alt="{{project.title}} project" class="img-fluid" loading="lazy" src="{{project.image}}" title="{{project.title}}">
       <div class="mask flex-center rgba-red-strong white-text column-direction">
         <figcaption *ngFor="let language of project.languages">{{language}}</figcaption>
       </div>
@@ -54,11 +54,11 @@
 
 <hr>
 
-<section id="hobby" class="hobby">
+<section class="hobby" id="hobby">
   <p class="centered-text section-title" style="width: 100%;">Hobby</p>
-  <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
-    <figure class="square view overlay" *ngFor="let hobby of hobbies">
-      <img class="img-fluid" loading="lazy" src="{{hobby.image}}" alt="{{hobby.title}}" title="{{hobby.title}}">
+  <div class="col-md-10 offset-md-1 container">
+    <figure *ngFor="let hobby of hobbies" class="square view overlay">
+      <img alt="{{hobby.title}}" class="img-fluid" loading="lazy" src="{{hobby.image}}" title="{{hobby.title}}">
       <div class="mask flex-center rgba-red-strong white-text column-direction">
         <figcaption>{{hobby.title}}</figcaption>
       </div>
@@ -68,12 +68,12 @@
 
 <hr>
 
-<section id="contacts" class="contacts">
+<section class="contacts" id="contacts">
   <p class="centered-text section-title" style="width: 100%;">Contacts</p>
   <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
-    <figure class="contact" *ngFor="let contact of contacts">
+    <figure *ngFor="let contact of contacts" class="contact">
       <a href="{{contact.url}}" title="Send me a mail">
-        <img class="img-fluid" loading="lazy" src="{{contact.icon}}" alt="{{contact.type}}" title="{{contact.type}}" srcset="">
+        <img alt="{{contact.type}}" class="img-fluid" loading="lazy" src="{{contact.icon}}" srcset="" title="{{contact.type}}">
       </a>
     </figure>
   </div>

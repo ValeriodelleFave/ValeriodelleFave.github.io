@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("./assets/fonts/roboto.css");
+
 @import url("./assets/styles/utils.css");
 @import url("./assets/styles/navigation.css");
 @import url("./assets/styles/presentation.css");
 @import url("./assets/styles/section.css");
 @import url("./assets/styles/contact.css");
+@import url("./assets/styles/mobile.css");
 
 .view {
   position: relative;
@@ -46,18 +48,4 @@
 .progress {
   height: 2em !important;
   margin-bottom: 1em !important;
-}
-
-@media screen and (max-width: 768px) {
-    .bullets {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-    .specialBullet-skills {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
 }

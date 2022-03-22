@@ -10,23 +10,28 @@ export class AppComponent {
   menuItems = [
     {
       name: "Intro",
-      link: "#presentation"
+      link: "#presentation",
+      image: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
     },
     {
       name: "About",
-      link: "#about"
+      link: "#about",
+      image: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
     },
     {
       name: "Projects",
-      link: "#projects"
+      link: "#projects",
+      image: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
     },
     {
       name: "Hobby",
-      link: "#hobby"
+      link: "#hobby",
+      image: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
     },
     {
       name: "Contacts",
-      link: "#contact"
+      link: "#contact",
+      image: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
     }
   ];
   specialBullet = {

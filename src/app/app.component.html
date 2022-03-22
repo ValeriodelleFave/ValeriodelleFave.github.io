@@ -11,10 +11,20 @@
   </mat-nav-list>
 </nav>
 
+<nav class="mini-nav">
+  <ul>
+    <li *ngFor="let menuItem of menuItems">
+      <a href="{{menuItem.link}}">
+        <img src="{{menuItem.image}}" alt="menuItem.name" height="50" width="50"> {{menuItem.name}}
+      </a>
+    </li>
+  </ul>
+</nav>
+
 <section id="about">
-  <p class="centered-text section-title" style="width: 100%;">About</p>
+  <p class="centered-text section-title">About</p>
   <div class="col-md-10 offset-md-1">
-    <div class="bullets" fxLayout="row" fxLayoutAlign="space-evenly start">
+    <div class="bullets">
       <figure *ngFor="let bullet of bullets"  class="bullet" fxLayout="column" fxLayoutAlign="center center">
         <img alt="{{bullet.image}}" loading="lazy" src="{{bullet.image}}" title="speed image">
         <figcaption class="centered-text">
@@ -33,7 +43,7 @@
       <div fxLayout="column" fxLayoutAlign="center none">
         <div *ngFor="let skill of skills" class="progress">
           <p class="pr-5">{{skill.name}}</p>
-          <div [ngStyle]="{'width': skill.value + '%'}" class="progress-bar" role="progressbar">{{skill.value}}%</div>
+          <div [ngStyle]="{'width': skill.value + '%'}" aria-label="skill.value" class="progress-bar" role="progressbar">{{skill.value}}%</div>
         </div>
       </div>
     </div>
@@ -43,8 +53,8 @@
 <hr>
 
 <div class="projects" id="projects">
-  <p class="centered-text section-title" style="width: 100%;">Projects</p>
-  <div class="col-md-10 offset-md-1 container">
+  <p class="centered-text section-title">Projects</p>
+  <div class="col-md-12 container">
     <figure *ngFor="let project of projects" class="square view overlay">
       <img alt="{{project.title}} project" class="img-fluid" loading="lazy" src="{{project.image}}" title="{{project.title}}">
       <div class="mask flex-center rgba-red-strong white-text column-direction">
@@ -57,8 +67,8 @@
 <hr>
 
 <section class="hobby" id="hobby">
-  <p class="centered-text section-title" style="width: 100%;">Hobby</p>
-  <div class="col-md-10 offset-md-1 container">
+  <p class="centered-text section-title">Hobby</p>
+  <div class="col-md-12 container">
     <figure *ngFor="let hobby of hobbies" class="square view overlay">
       <img alt="{{hobby.title}}" class="img-fluid" loading="lazy" src="{{hobby.image}}" title="{{hobby.title}}">
       <div class="mask flex-center rgba-red-strong white-text column-direction">
@@ -70,8 +80,8 @@
 
 <hr>
 
-<section class="contacts" id="contacts">
-  <p class="centered-text section-title" style="width: 100%;">Contacts</p>
+<section class="contacts" id="contact">
+  <p class="centered-text section-title">Contacts</p>
   <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
     <figure *ngFor="let contact of contacts" class="contact">
       <a href="{{contact.url}}" title="Send me a mail">

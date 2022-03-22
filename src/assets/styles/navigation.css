@@ -6,6 +6,29 @@ nav {
     color: white;
 }
 
+.mini-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.mini-nav ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mini-nav ul li {
+    list-style: none;
+}
+
+.mini-nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 mat-nav-list {
     padding: 0 !important;
 }

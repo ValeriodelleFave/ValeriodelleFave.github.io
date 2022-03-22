@@ -43,4 +43,5 @@ section p {
 .section-title {
     padding: 0.5em 0;
     font-size: x-large;
+    font-weight: bold;
 }

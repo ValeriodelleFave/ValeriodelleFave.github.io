@@ -18,7 +18,7 @@
       <figure *ngFor="let bullet of bullets"  class="bullet" fxLayout="column" fxLayoutAlign="center center">
         <img alt="{{bullet.image}}" loading="lazy" src="{{bullet.image}}" title="speed image">
         <figcaption class="centered-text">
-          <b>{{bullet.title}}</b>
+          <b class="bold-text">{{bullet.title}}</b>
           <blockquote>{{bullet.description}}</blockquote>
         </figcaption>
       </figure>
@@ -27,7 +27,7 @@
     <div class="specialBullet-skills">
       <figure class="special-bullet" fxLayout="column center">
         <img  alt="me image" class="img-fluid" loading="lazy" src="{{specialBullet.image}}" title="me image">
-        <span class="special-bullet-title centered-text">{{specialBullet.title}}</span>
+        <span class="special-bullet-title centered-text bold-text">{{specialBullet.title}}</span>
         <span class="special-bullet-description justify-text">{{specialBullet.description}}</span>
       </figure>
       <div fxLayout="column" fxLayoutAlign="center none">

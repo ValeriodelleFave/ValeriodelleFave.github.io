@@ -1,9 +1,13 @@
-mat-nav-list {
-    padding: 0 !important;
+nav {
     position: sticky !important;
     top: 0;
     z-index: 10;
     background-color: #3f3a3a;
+    color: white;
+}
+
+mat-nav-list {
+    padding: 0 !important;
 }
 
 mat-list-item {

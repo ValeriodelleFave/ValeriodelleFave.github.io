@@ -3,11 +3,13 @@
   <button class="startButton btn btn-outline-primary btn-lg" onclick="start()">Iniziamo!</button>
 </section>
 
-<mat-nav-list fxLayout="row" fxLayoutAlign="space-evenly center" role="navigation">
-  <mat-list-item *ngFor="let menuItem of menuItems" fxLayoutAlign="center center">
-    <a href="{{menuItem.link}}">{{menuItem.name}}</a>
-  </mat-list-item>
-</mat-nav-list>
+<nav>
+  <mat-nav-list fxLayout="row" fxLayoutAlign="space-evenly center" role="navigation">
+    <mat-list-item *ngFor="let menuItem of menuItems" fxLayoutAlign="center center">
+      <a href="{{menuItem.link}}">{{menuItem.name}}</a>
+    </mat-list-item>
+  </mat-nav-list>
+</nav>
 
 <section id="about">
   <p class="centered-text section-title" style="width: 100%;">About</p>
@@ -25,8 +27,8 @@
     <div class="specialBullet-skills">
       <figure class="special-bullet" fxLayout="column center">
         <img  alt="me image" class="img-fluid" loading="lazy" src="{{specialBullet.image}}" title="me image">
-        <span class=" centered-text">{{specialBullet.title}}</span>
-        <span>{{specialBullet.description}}</span>
+        <span class="special-bullet-title centered-text">{{specialBullet.title}}</span>
+        <span class="special-bullet-description justify-text">{{specialBullet.description}}</span>
       </figure>
       <div fxLayout="column" fxLayoutAlign="center none">
         <div *ngFor="let skill of skills" class="progress">

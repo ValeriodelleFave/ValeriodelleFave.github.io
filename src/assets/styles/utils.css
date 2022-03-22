@@ -33,3 +33,5 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.justify-text { text-align: justify; }

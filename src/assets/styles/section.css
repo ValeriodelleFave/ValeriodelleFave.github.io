@@ -46,9 +46,42 @@ section p {
     height: 200px;
 }
 
+.title-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .section-title {
     padding: 0.5em 0;
     font-size: x-large;
     font-weight: bold;
-    width: 100%;
+    padding-top: 96px;
+    border-bottom: 3px solid #000;
+}
+
+.skill-bar {
+  display: flex;
+  background-color: #e9ecef;
+  margin-bottom: 2em;
+  height: 2em;
+}
+
+.skill-bar p {
+  height: inherit;
+  width: 100px;
+  margin-bottom: 0;
+  position: absolute;
+  background-color: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-bar div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-align: end;
+  background-color: #abc;
 }

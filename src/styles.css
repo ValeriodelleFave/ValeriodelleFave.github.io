@@ -45,9 +45,10 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.progress {
-  height: 2em !important;
-  margin-bottom: 1em !important;
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {

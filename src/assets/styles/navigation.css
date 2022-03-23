@@ -4,36 +4,41 @@ nav {
     z-index: 10;
     background-color: #3f3a3a;
     color: white;
-}
-
-.mini-nav {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.mini-nav ul {
-    padding-left: 0;
     display: flex;
-    justify-content: space-around;
-}
-
-.mini-nav ul li {
-    list-style: none;
-}
-
-.mini-nav ul li a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 mat-nav-list {
     padding: 0 !important;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
 }
 
 mat-list-item {
     padding: 0 !important;
     width: auto !important;
+}
+
+.mini-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.mini-nav ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.mini-nav ul li {
+  list-style: none;
+}
+
+.mini-nav ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

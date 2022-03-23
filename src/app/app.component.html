@@ -22,7 +22,9 @@
 </nav>
 
 <section id="about">
-  <p class="centered-text section-title">About</p>
+  <div class="title-container">
+    <p class="centered-text section-title">About</p>
+  </div>
   <div class="col-md-10 offset-md-1">
     <div class="bullets">
       <figure *ngFor="let bullet of bullets"  class="bullet" fxLayout="column" fxLayoutAlign="center center">
@@ -41,9 +43,9 @@
         <span class="special-bullet-description justify-text">{{specialBullet.description}}</span>
       </figure>
       <div fxLayout="column" fxLayoutAlign="center none">
-        <div *ngFor="let skill of skills" class="progress">
-          <p class="pr-5">{{skill.name}}</p>
-          <div [ngStyle]="{'width': skill.value + '%'}" aria-label="skill.value" class="progress-bar" role="progressbar">{{skill.value}}%</div>
+        <div *ngFor="let skill of skills" class="skill-bar">
+          <p class="pl-5 pr-5">{{skill.name}}</p>
+          <div [ngStyle]="{'width': skill.value + '%'}" aria-label="skill.value" class="pr-5">{{skill.value}}%</div>
         </div>
       </div>
     </div>
@@ -53,7 +55,9 @@
 <hr>
 
 <div class="projects" id="projects">
-  <p class="centered-text section-title">Projects</p>
+  <div class="title-container">
+    <p class="centered-text section-title">Projects</p>
+  </div>
   <div class="col-md-12 container">
     <figure *ngFor="let project of projects" class="square view overlay">
       <img alt="{{project.title}} project" class="img-fluid" loading="lazy" src="{{project.image}}" title="{{project.title}}">
@@ -67,7 +71,9 @@
 <hr>
 
 <section class="hobby" id="hobby">
-  <p class="centered-text section-title">Hobby</p>
+  <div class="title-container">
+    <p class="centered-text section-title">Hobby</p>
+  </div>
   <div class="col-md-12 container">
     <figure *ngFor="let hobby of hobbies" class="square view overlay">
       <img alt="{{hobby.title}}" class="img-fluid" loading="lazy" src="{{hobby.image}}" title="{{hobby.title}}">
@@ -81,7 +87,9 @@
 <hr>
 
 <section class="contacts" id="contact">
-  <p class="centered-text section-title">Contacts</p>
+  <div class="title-container">
+    <p class="centered-text section-title">Contacts</p>
+  </div>
   <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
     <figure *ngFor="let contact of contacts" class="contact">
       <a href="{{contact.url}}" title="Send me a mail">

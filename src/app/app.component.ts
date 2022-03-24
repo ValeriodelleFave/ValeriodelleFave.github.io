@@ -10,23 +10,28 @@ export class AppComponent {
   menuItems = [
     {
       name: "Intro",
-      link: "#presentation"
+      link: "#presentation",
+      image: "../assets/icons/nav/presentation.png"
     },
     {
       name: "About",
-      link: "#about"
+      link: "#about",
+      image: "../assets/icons/nav/about.png"
     },
     {
       name: "Projects",
-      link: "#projects"
+      link: "#projects",
+      image: "../assets/icons/nav/projects.png"
     },
     {
       name: "Hobby",
-      link: "#hobby"
+      link: "#hobby",
+      image: "../assets/icons/nav/hobbies.png"
     },
     {
       name: "Contacts",
-      link: "#contact"
+      link: "#contact",
+      image: "../assets/icons/nav/contact.png"
     }
   ];
   specialBullet = {

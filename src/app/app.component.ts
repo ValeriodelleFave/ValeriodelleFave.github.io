@@ -11,27 +11,27 @@ export class AppComponent {
     {
       name: "Intro",
       link: "#presentation",
-      image: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      image: "../assets/icons/nav/presentation.png"
     },
     {
       name: "About",
       link: "#about",
-      image: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      image: "../assets/icons/nav/about.png"
     },
     {
       name: "Projects",
       link: "#projects",
-      image: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      image: "../assets/icons/nav/projects.png"
     },
     {
       name: "Hobby",
       link: "#hobby",
-      image: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      image: "../assets/icons/nav/hobbies.png"
     },
     {
       name: "Contacts",
       link: "#contact",
-      image: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      image: "../assets/icons/nav/contact.png"
     }
   ];
   specialBullet = {

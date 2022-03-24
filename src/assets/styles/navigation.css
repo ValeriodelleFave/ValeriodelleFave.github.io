@@ -35,10 +35,14 @@ mat-list-item {
 
 .mini-nav ul li {
   list-style: none;
+  padding: 0.25em 0;
 }
 
 .mini-nav ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: small;
+  text-decoration: none;
+  color: white;
 }

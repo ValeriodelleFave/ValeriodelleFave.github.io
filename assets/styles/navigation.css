@@ -42,7 +42,7 @@ mat-list-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: small;
+  font-size: x-small;
   text-decoration: none;
   color: white;
 }

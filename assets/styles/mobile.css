@@ -5,6 +5,14 @@
 
 @media only screen and (max-device-width: 768px) {
   /* Styles */
+  nav {
+    display: none;
+  }
+
+  .mini-nav {
+    display: block;
+  }
+
   .bullets {
     display: flex;
     flex-direction: column;

@@ -45,7 +45,9 @@
       <div fxLayout="column" fxLayoutAlign="center none">
         <div *ngFor="let skill of skills" class="skill-bar">
           <p class="pl-5 pr-5">{{skill.name}}</p>
-          <div [ngStyle]="{'width': skill.value + '%'}" aria-label="skill.value" class="pr-5">{{skill.value}}%</div>
+          <div [ngStyle]="{'width': skill.value + '%'}" aria-label="skill.value" class="pr-5">
+            <span>{{skill.value}}%</span>
+          </div>
         </div>
       </div>
     </div>

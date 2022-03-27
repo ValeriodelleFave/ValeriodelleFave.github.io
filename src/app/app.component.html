@@ -30,7 +30,7 @@
     <div class="col-md-10 offset-md-1">
       <div class="bullets">
         <figure *ngFor="let bullet of bullets"  class="bullet" fxLayout="column" fxLayoutAlign="center center">
-          <img alt="{{bullet.image}}" loading="lazy" src="{{bullet.image}}" title="speed image">
+          <img alt="{{bullet.image}}" class="mb-05" loading="lazy" src="{{bullet.image}}" title="speed image">
           <figcaption class="centered-text">
             <b class="bold-text">{{bullet.title}}</b>
             <blockquote>{{bullet.description}}</blockquote>
@@ -41,13 +41,13 @@
       <div class="specialBullet-skills">
         <figure class="special-bullet" fxLayout="column center">
           <img  alt="me image" class="img-fluid" loading="lazy" src="{{specialBullet.image}}" title="me image">
-          <span class="special-bullet-title centered-text bold-text">{{specialBullet.title}}</span>
+          <span class="special-bullet-title centered-text bold-text mt-05">{{specialBullet.title}}</span>
           <span class="special-bullet-description justify-text">{{specialBullet.description}}</span>
         </figure>
         <div fxLayout="column" fxLayoutAlign="center none">
           <div *ngFor="let skill of skills" class="skill-bar">
-            <p class="pl-5 pr-5">{{skill.name}}</p>
-            <div [ngStyle]="{'width': skill.value + '%'}" aria-label="skill.value" class="pr-5">
+            <p class="pl-2 pr-2">{{skill.name}}</p>
+            <div [ngStyle]="{'width': skill.value + '%'}" aria-label="skill.value" class="pr-2">
               <span>{{skill.value}}%</span>
             </div>
           </div>

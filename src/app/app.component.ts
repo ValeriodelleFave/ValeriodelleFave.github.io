@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+ 
   presentationTitle = "Ciao, sono <b>Valerio delle Fave</b>. <br>Sono uno sviluppatore Front-End.";
   menuItems = [
     {
@@ -20,7 +21,7 @@ export class AppComponent {
     },
     {
       name: "Projects",
-      link: "#projects",
+      link: "#project",
       image: "../assets/icons/nav/projects.png"
     },
     {
@@ -174,6 +175,41 @@ export class AppComponent {
   ];
   copyrightText = "Copyright © Valerio delle Fave. All Rights Reserved.";
 
+  sections: any[] = [
+    {
+      type: "about",
+      title: "About",
+      content: [
+
+      ]
+    },
+    {
+      type: "project",
+      title: "Project",
+      content: [
+
+      ]
+    },
+    {
+      type: "hobby",
+      title: "Hobby",
+      content: [
+
+      ]
+    },
+    {
+      type: "contact",
+      title: "Contacts",
+      content: [
+
+      ]
+    }
+  ];
 
 }
 
+enum Types {
+  About = "about",
+  Project = "project",
+  Hobby = "hobby"
+}

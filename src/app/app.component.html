@@ -21,84 +21,74 @@
   </ul>
 </nav>
 
-<section id="about">
+<section *ngFor="let section of sections" id="{{section.type}}">
   <div class="title-container">
-    <p class="centered-text section-title">About</p>
+    <p class="centered-text section-title">{{section.title}}</p>
   </div>
-  <div class="col-md-10 offset-md-1">
-    <div class="bullets">
-      <figure *ngFor="let bullet of bullets"  class="bullet" fxLayout="column" fxLayoutAlign="center center">
-        <img alt="{{bullet.image}}" loading="lazy" src="{{bullet.image}}" title="speed image">
-        <figcaption class="centered-text">
-          <b class="bold-text">{{bullet.title}}</b>
-          <blockquote>{{bullet.description}}</blockquote>
-        </figcaption>
-      </figure>
-    </div>
 
-    <div class="specialBullet-skills">
-      <figure class="special-bullet" fxLayout="column center">
-        <img  alt="me image" class="img-fluid" loading="lazy" src="{{specialBullet.image}}" title="me image">
-        <span class="special-bullet-title centered-text bold-text">{{specialBullet.title}}</span>
-        <span class="special-bullet-description justify-text">{{specialBullet.description}}</span>
-      </figure>
-      <div fxLayout="column" fxLayoutAlign="center none">
-        <div *ngFor="let skill of skills" class="skill-bar">
-          <p class="pl-5 pr-5">{{skill.name}}</p>
-          <div [ngStyle]="{'width': skill.value + '%'}" aria-label="skill.value" class="pr-5">
-            <span>{{skill.value}}%</span>
+  <ng-container *ngIf="section.type == 'about'">
+    <div class="col-md-10 offset-md-1">
+      <div class="bullets">
+        <figure *ngFor="let bullet of bullets"  class="bullet" fxLayout="column" fxLayoutAlign="center center">
+          <img alt="{{bullet.image}}" loading="lazy" src="{{bullet.image}}" title="speed image">
+          <figcaption class="centered-text">
+            <b class="bold-text">{{bullet.title}}</b>
+            <blockquote>{{bullet.description}}</blockquote>
+          </figcaption>
+        </figure>
+      </div>
+  
+      <div class="specialBullet-skills">
+        <figure class="special-bullet" fxLayout="column center">
+          <img  alt="me image" class="img-fluid" loading="lazy" src="{{specialBullet.image}}" title="me image">
+          <span class="special-bullet-title centered-text bold-text">{{specialBullet.title}}</span>
+          <span class="special-bullet-description justify-text">{{specialBullet.description}}</span>
+        </figure>
+        <div fxLayout="column" fxLayoutAlign="center none">
+          <div *ngFor="let skill of skills" class="skill-bar">
+            <p class="pl-5 pr-5">{{skill.name}}</p>
+            <div [ngStyle]="{'width': skill.value + '%'}" aria-label="skill.value" class="pr-5">
+              <span>{{skill.value}}%</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </ng-container>
 
-<hr>
+  <ng-container *ngIf="section.type == 'project'">
+    <div class="col-md-12 container">
+      <figure *ngFor="let project of projects" class="square view overlay">
+        <img alt="{{project.title}} project" class="img-fluid" loading="lazy" src="{{project.image}}" title="{{project.title}}">
+        <div class="mask flex-center rgba-red-strong white-text column-direction">
+          <figcaption *ngFor="let language of project.languages">{{language}}</figcaption>
+        </div>
+      </figure>
+    </div>
+  </ng-container>
 
-<div class="projects" id="projects">
-  <div class="title-container">
-    <p class="centered-text section-title">Projects</p>
-  </div>
-  <div class="col-md-12 container">
-    <figure *ngFor="let project of projects" class="square view overlay">
-      <img alt="{{project.title}} project" class="img-fluid" loading="lazy" src="{{project.image}}" title="{{project.title}}">
-      <div class="mask flex-center rgba-red-strong white-text column-direction">
-        <figcaption *ngFor="let language of project.languages">{{language}}</figcaption>
-      </div>
-    </figure>
-  </div>
-</div>
+  <ng-container *ngIf="section.type == 'hobby'">
+    <div class="col-md-12 container">
+      <figure *ngFor="let hobby of hobbies" class="square view overlay">
+        <img alt="{{hobby.title}}" class="img-fluid" loading="lazy" src="{{hobby.image}}" title="{{hobby.title}}">
+        <div class="mask flex-center rgba-red-strong white-text column-direction">
+          <figcaption>{{hobby.title}}</figcaption>
+        </div>
+      </figure>
+    </div>
+  </ng-container>
 
-<hr>
+  <ng-container *ngIf="section.type == 'contact'">
+    <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
+      <figure *ngFor="let contact of contacts" class="contact">
+        <a href="{{contact.url}}" title="Send me a mail">
+          <img alt="{{contact.type}}" class="img-fluid" loading="lazy" src="{{contact.icon}}" srcset="" title="{{contact.type}}">
+        </a>
+      </figure>
+    </div>
+  </ng-container>
 
-<section class="hobby" id="hobby">
-  <div class="title-container">
-    <p class="centered-text section-title">Hobby</p>
-  </div>
-  <div class="col-md-12 container">
-    <figure *ngFor="let hobby of hobbies" class="square view overlay">
-      <img alt="{{hobby.title}}" class="img-fluid" loading="lazy" src="{{hobby.image}}" title="{{hobby.title}}">
-      <div class="mask flex-center rgba-red-strong white-text column-direction">
-        <figcaption>{{hobby.title}}</figcaption>
-      </div>
-    </figure>
-  </div>
-</section>
-
-<hr>
-
-<section class="contacts" id="contact">
-  <div class="title-container">
-    <p class="centered-text section-title">Contacts</p>
-  </div>
-  <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
-    <figure *ngFor="let contact of contacts" class="contact">
-      <a href="{{contact.url}}" title="Send me a mail">
-        <img alt="{{contact.type}}" class="img-fluid" loading="lazy" src="{{contact.icon}}" srcset="" title="{{contact.type}}">
-      </a>
-    </figure>
-  </div>
+  <hr>
 </section>
 
 <footer>

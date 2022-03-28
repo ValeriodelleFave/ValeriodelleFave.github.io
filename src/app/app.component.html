@@ -37,19 +37,18 @@
           </figcaption>
         </figure>
       </div>
-  
+
       <div class="specialBullet-skills">
         <figure class="special-bullet" fxLayout="column center">
-          <img  alt="me image" class="img-fluid" loading="lazy" src="{{specialBullet.image}}" title="me image">
+          <img alt="me image" class="img-fluid" loading="lazy" src="{{specialBullet.image}}" title="me image">
           <span class="special-bullet-title centered-text bold-text mt-05">{{specialBullet.title}}</span>
           <span class="special-bullet-description justify-text">{{specialBullet.description}}</span>
         </figure>
-        <div fxLayout="column" fxLayoutAlign="center none">
+        <div fxLayout="column" fxLayoutAlign="center none" class="pl-1 pr-1">
           <div *ngFor="let skill of skills" class="skill-bar">
             <p class="pl-2 pr-2">{{skill.name}}</p>
-            <div [ngStyle]="{'width': skill.value + '%'}" aria-label="skill.value" class="pr-2">
-              <span>{{skill.value}}%</span>
-            </div>
+            <div [ngStyle]="{'width': skill.value + '%'}" aria-label="skill.value"></div>
+            <span class="mr-1">{{skill.value}}%</span>
           </div>
         </div>
       </div>

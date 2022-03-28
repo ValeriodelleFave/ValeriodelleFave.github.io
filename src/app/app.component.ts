@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- 
+
   presentationTitle = "Ciao, sono <b>Valerio delle Fave</b>. <br>Sono uno sviluppatore Front-End.";
   menuItems = [
     {
@@ -211,5 +211,6 @@ export class AppComponent {
 enum Types {
   About = "about",
   Project = "project",
-  Hobby = "hobby"
+
+ Hobby = "hobby"
 }

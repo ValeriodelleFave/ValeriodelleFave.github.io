@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   presentationTitle = "Ciao, sono <b>Valerio delle Fave</b>. <br>Sono uno sviluppatore Front-End.";
   menuItems = [
     {
@@ -20,7 +21,7 @@ export class AppComponent {
     },
     {
       name: "Projects",
-      link: "#projects",
+      link: "#project",
       image: "../assets/icons/nav/projects.png"
     },
     {
@@ -37,28 +38,28 @@ export class AppComponent {
   specialBullet = {
     title: "Chi è questo tizio?",
     description: "Attualmente, sono uno sviluppatore Front-End residente a Roma. Ho una passione per il mondo IT, mi piace fornire soluzioni innovative implementando diverse strategie di ottimizzazione e risoluzione del caso.",
-    image: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    image: "../assets/placeholders/placeholder_250x300.png"
   };
   bullets = [
     {
       title: "Veloce",
       description: "Una grande priorità è ottenere i caricamenti rapidi durante le interazioni.",
-      image: "../assets/images/bullets/speed.png"
+      image: "../assets/placeholders/placeholder_100x100.png"
     },
     {
       title: "Semplice",
       description: "\"Keep it simple\".",
-      image: "../assets/images/bullets/simple.png"
+      image: "../assets/placeholders/placeholder_100x100.png"
     },
     {
       title: "Dinamico",
       description: "I vari layouts devono adattarsi a ogni forma, grande o piccola che sia.",
-      image: "../assets/images/bullets/dynamic.png"
+      image: "../assets/placeholders/placeholder_100x100.png"
     },
     {
       title: "Curioso",
       description: "Scoprire nuovi approcci metodologici.",
-      image: "../assets/images/bullets/curious.png"
+      image: "../assets/placeholders/placeholder_100x100.png"
     }
   ];
   skills = [
@@ -100,7 +101,7 @@ export class AppComponent {
         "Programmazione iOS/iPad",
         "Swift"
       ],
-      image: "../assets/images/projects/logo_RAI.png"
+      image: "../assets/placeholders/placeholder_200x200.png"
     },
     {
       title: "RAI Front-End",
@@ -114,7 +115,7 @@ export class AppComponent {
         "SQL",
         "MongoDB"
       ],
-      image: "../assets/images/projects/logo_raiplay.png"
+      image: "../assets/placeholders/placeholder_200x200.png"
     },
     {
       title: "RaiPlay tvOS",
@@ -124,56 +125,92 @@ export class AppComponent {
         "Programmazione tvOS",
         "Swift"
       ],
-      image: "../assets/images/projects/logo_RAI.png"
+      image: "../assets/placeholders/placeholder_200x200.png"
     }
   ];
   hobbies = [
     {
       title: "Teatro - Recitazione",
-      image: "../assets/images/hobbies/teatro.png"
+      image: "../assets/placeholders/placeholder_200x200.png"
     },
     {
       title: "Fitness",
-      image: "../assets/images/hobbies/fitness.png"
+      image: "../assets/placeholders/placeholder_200x200.png"
     },
     {
       title: "Corsa",
-      image: "../assets/images/hobbies/running.png"
+      image: "../assets/placeholders/placeholder_200x200.png"
     },
     {
       title: "Lettura",
-      image: "../assets/images/hobbies/reading.png"
+      image: "../assets/placeholders/placeholder_200x200.png"
     }
   ];
   contacts = [
     {
       type: "Email",
       url: "mailto:valerio.dellefave00@gmail.com",
-      icon: "../assets/icons/social/email.png"
+      icon: "../assets/placeholders/placeholder_75x75.png"
     },
     {
       type: "Facebook",
       url: "https://www.facebook.com/valerio.dellefave",
-      icon: "../assets/icons/social/facebook.png"
+      icon: "../assets/placeholders/placeholder_75x75.png"
     },
     {
       type: "GitHub",
       url: "https://github.com/ValeriodelleFave",
-      icon: "../assets/icons/social/github.png"
+      icon: "../assets/placeholders/placeholder_75x75.png"
     },
     {
       type: "Instagram",
       url: "https://www.instagram.com/valerio_dellefave",
-      icon: "../assets/icons/social/instagram.png"
+      icon: "../assets/placeholders/placeholder_75x75.png"
     },
     {
       type: "LinkedIn",
       url: "https://www.linkedin.com/in/valerio-delle-fave",
-      icon: "../assets/icons/social/linkedin.png"
+      icon: "../assets/placeholders/placeholder_75x75.png"
     },
   ];
   copyrightText = "Copyright © Valerio delle Fave. All Rights Reserved.";
 
+  sections: any[] = [
+    {
+      type: "about",
+      title: "About",
+      content: [
+
+      ]
+    },
+    {
+      type: "project",
+      title: "Project",
+      content: [
+
+      ]
+    },
+    {
+      type: "hobby",
+      title: "Hobby",
+      content: [
+
+      ]
+    },
+    {
+      type: "contact",
+      title: "Contacts",
+      content: [
+
+      ]
+    }
+  ];
 
 }
 
+enum Types {
+  About = "about",
+  Project = "project",
+
+ Hobby = "hobby"
+}

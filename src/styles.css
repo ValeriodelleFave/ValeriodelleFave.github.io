@@ -50,15 +50,3 @@ footer {
   justify-content: center;
   width: 100%;
 }
-
-@media screen and (max-width: 768px) {
-  .specialBullet-skills, .bullets  {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .bullets  {
-    align-items: center;
-  }
-}

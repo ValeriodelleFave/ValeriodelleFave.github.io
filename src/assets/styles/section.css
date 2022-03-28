@@ -65,6 +65,7 @@ section p {
   background-color: #e9ecef;
   margin-bottom: 2em;
   height: 2em;
+  position: relative;
 }
 
 .skill-bar p {
@@ -82,6 +83,11 @@ section p {
   display: flex;
   align-items: center;
   justify-content: end;
-  text-align: end;
   background-color: #abc;
+}
+
+.skill-bar span {
+  right: 0;
+  margin-top: 4px;
+  position: absolute;
 }

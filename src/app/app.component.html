@@ -22,7 +22,7 @@
 </nav>
 
 <section *ngFor="let section of sections" id="{{section.type}}">
-  <div class="title-container">
+  <div class="title-container pb-5">
     <p class="centered-text section-title">{{section.title}}</p>
   </div>
 
@@ -78,7 +78,7 @@
   </ng-container>
 
   <ng-container *ngIf="section.type == 'contact'">
-    <div class="col-md-10 offset-md-1" fxLayout="row wrap" fxLayoutAlign="space-evenly start">
+    <div class="col-md-10 offset-md-1" class="contacts">
       <figure *ngFor="let contact of contacts" class="contact">
         <a href="{{contact.url}}" title="Send me a mail">
           <img alt="{{contact.type}}" class="img-fluid" loading="lazy" src="{{contact.icon}}" srcset="" title="{{contact.type}}">
@@ -87,7 +87,7 @@
     </div>
   </ng-container>
 
-  <hr>
+  <hr class="mt-5">
 </section>
 
 <footer>

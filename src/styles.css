@@ -8,6 +8,18 @@
 @import url("./assets/styles/contact.css");
 @import url("./assets/styles/mobile.css");
 
+#presentation {
+  background-color: #3f3a3a;
+}
+
+#about, #hobby {
+  background-color: #fff;
+}
+
+#project, #contact, #footer {
+  background-color: #f5f5f5;
+}
+
 .view {
   position: relative;
   overflow: hidden;

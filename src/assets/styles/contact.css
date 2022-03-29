@@ -1,6 +1,20 @@
 .contact {
     width: 75px;
     height: 75px;
+    color: #353c4a;
+    border: .125rem solid #f3f3f3;
+    box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
+    border-radius: 50%;
+    transition: 250ms;
+}
+
+.contact:hover, .contact:focus {
+    color: #b06ab3;
+    box-shadow: 0 0 24px 0 #b06ab3;
+}
+
+.contact a img {
+    border-radius: 50%;
 }
 
 .contacts {

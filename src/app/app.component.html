@@ -1,6 +1,6 @@
 <section class="presentation" fxLayout="column" fxLayoutAlign="center center" id="presentation">
-  <h1 [innerHTML]="presentationTitle"></h1>
-  <button class="startButton btn btn-outline-primary btn-lg"><a href="#about">Iniziamo!</a></button>
+  <h1 [innerHTML]="presentationTitle" class="centered-text"></h1>
+  <a href="#about"><button class="bn30 startButton btn btn-outline-primary btn-lg">Iniziamo!</button></a>
 </section>
 
 <nav>
@@ -21,7 +21,7 @@
   </ul>
 </nav>
 
-<section *ngFor="let section of sections" id="{{section.type}}">
+<section *ngFor="let section of sections" id="{{section.type}}" class="pb-5">
   <div class="title-container pb-5">
     <p class="centered-text section-title">{{section.title}}</p>
   </div>

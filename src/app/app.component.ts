@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  presentationTitle = "Ciao, sono <b>Valerio delle Fave</b>. <br>Sono uno sviluppatore Front-End.";
+  presentationTitle = "Ciao!<br>Sono <b>Valerio delle Fave</b>.";
   menuItems = [
     {
       name: "Intro",

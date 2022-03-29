@@ -2,7 +2,7 @@ nav {
     position: sticky !important;
     top: 0;
     z-index: 10;
-    background-color: #3f3a3a;
+    background: linear-gradient(45deg, #4568dc, #b06ab3);
     color: white;
     display: flex;
     justify-content: center;

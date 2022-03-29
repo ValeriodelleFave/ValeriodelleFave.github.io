@@ -202,27 +202,27 @@ export class AppComponent {
       {
         type: "Email",
         url: "mailto:valerio.dellefave00@gmail.com",
-        icon: "../assets/placeholders/placeholder_75x75.png"
+        icon: "../assets/icons/social/email.png"
       },
       {
         type: "Facebook",
         url: "https://www.facebook.com/valerio.dellefave",
-        icon: "../assets/placeholders/placeholder_75x75.png"
+        icon: "../assets/icons/social/facebook.png"
       },
       {
         type: "GitHub",
         url: "https://github.com/ValeriodelleFave",
-        icon: "../assets/placeholders/placeholder_75x75.png"
+        icon: "../assets/icons/social/github.png"
       },
       {
         type: "Instagram",
         url: "https://www.instagram.com/valerio_dellefave",
-        icon: "../assets/placeholders/placeholder_75x75.png"
+        icon: "../assets/icons/social/instagram.png"
       },
       {
         type: "LinkedIn",
         url: "https://www.linkedin.com/in/valerio-delle-fave",
-        icon: "../assets/placeholders/placeholder_75x75.png"
+        icon: "../assets/icons/social/linkedin.png"
       },
     ];
     this.copyrightText = "Copyright © Valerio delle Fave. All Rights Reserved.";

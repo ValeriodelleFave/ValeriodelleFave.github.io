@@ -17,34 +17,26 @@ export class AppComponent {
   public contacts: any[] = [];
   public copyrightText: string = "";
 
-  sections: any[] = [
+  public sections: any[] = [
     {
       type: "about",
       title: "About",
-      content: [
-
-      ]
+      content: [ ]
     },
     {
       type: "project",
       title: "Project",
-      content: [
-
-      ]
+      content: [ ]
     },
     {
       type: "hobby",
       title: "Hobby",
-      content: [
-
-      ]
+      content: [ ]
     },
     {
       type: "contact",
       title: "Contacts",
-      content: [
-
-      ]
+      content: [ ]
     }
   ];
 

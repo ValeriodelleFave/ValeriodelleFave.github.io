@@ -1,11 +1,11 @@
-<section class="presentation" fxLayout="column" fxLayoutAlign="center center" id="presentation">
+<section class="presentation" id="presentation">
   <h1 [innerHTML]="presentationTitle" class="centered-text"></h1>
-  <a href="#about"><button class="bn30 startButton btn btn-outline-primary btn-lg">Iniziamo!</button></a>
+  <a href="#about"><button class="bn30">Iniziamo!</button></a>
 </section>
 
 <nav>
-  <mat-nav-list fxLayout="row" fxLayoutAlign="space-evenly center" role="navigation">
-    <mat-list-item *ngFor="let menuItem of menuItems" fxLayoutAlign="center center">
+  <mat-nav-list>
+    <mat-list-item *ngFor="let menuItem of menuItems">
       <a href="{{menuItem.link}}">{{menuItem.name}}</a>
     </mat-list-item>
   </mat-nav-list>
@@ -29,7 +29,7 @@
   <ng-container *ngIf="section.type == 'about'">
     <div class="col-md-10 offset-md-1">
       <div class="bullets">
-        <figure *ngFor="let bullet of bullets"  class="bullet" fxLayout="column" fxLayoutAlign="center center">
+        <figure *ngFor="let bullet of bullets" class="bullet">
           <img alt="{{bullet.image}}" class="mb-05" loading="lazy" src="{{bullet.image}}" title="speed image">
           <figcaption class="centered-text">
             <b class="bold-text">{{bullet.title}}</b>
@@ -39,12 +39,12 @@
       </div>
 
       <div class="specialBullet-skills">
-        <figure class="special-bullet" fxLayout="column center">
+        <figure class="special-bullet">
           <img alt="me image" class="img-fluid" loading="lazy" src="{{specialBullet.image}}" title="me image">
           <span class="special-bullet-title centered-text bold-text mt-05">{{specialBullet.title}}</span>
           <span class="special-bullet-description justify-text">{{specialBullet.description}}</span>
         </figure>
-        <div fxLayout="column" fxLayoutAlign="center none" class="pl-1 pr-1">
+        <div class="skills-container pl-1 pr-1">
           <div *ngFor="let skill of skills" class="skill-bar">
             <p class="pl-2 pr-2">{{skill.name}}</p>
             <div [ngStyle]="{'width': skill.value + '%'}" aria-label="skill.value"></div>

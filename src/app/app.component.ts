@@ -17,6 +17,9 @@ export class AppComponent {
   public contacts: any[] = [];
   public copyrightText: string = "";
 
+  public certifications: any[] = [];
+  public graduates: any[] = [];
+
   public sections: any[] = [
     {
       type: "about",

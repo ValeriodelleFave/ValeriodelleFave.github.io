@@ -17,34 +17,26 @@ export class AppComponent {
   public contacts: any[] = [];
   public copyrightText: string = "";
 
-  sections: any[] = [
+  public sections: any[] = [
     {
       type: "about",
       title: "About",
-      content: [
-
-      ]
+      content: [ ]
     },
-    {
-      type: "project",
-      title: "Project",
-      content: [
-
-      ]
-    },
-    {
-      type: "hobby",
-      title: "Hobby",
-      content: [
-
-      ]
-    },
+    // {
+    //   type: "project",
+    //   title: "Project",
+    //   content: [ ]
+    // },
+    // {
+    //   type: "hobby",
+    //   title: "Hobby",
+    //   content: [ ]
+    // },
     {
       type: "contact",
       title: "Contacts",
-      content: [
-
-      ]
+      content: [ ]
     }
   ];
 
@@ -101,16 +93,16 @@ export class AppComponent {
         link: "#about",
         image: "../assets/icons/nav/about.png"
       },
-      {
-        name: "Projects",
-        link: "#project",
-        image: "../assets/icons/nav/projects.png"
-      },
-      {
-        name: "Hobby",
-        link: "#hobby",
-        image: "../assets/icons/nav/hobbies.png"
-      },
+      // {
+      //   name: "Projects",
+      //   link: "#project",
+      //   image: "../assets/icons/nav/projects.png"
+      // },
+      // {
+      //   name: "Hobby",
+      //   link: "#hobby",
+      //   image: "../assets/icons/nav/hobbies.png"
+      // },
       {
         name: "Contacts",
         link: "#contact",

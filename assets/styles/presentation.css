@@ -1,6 +1,10 @@
 .presentation {
     height: calc(100vh + 53px);
     background-color: #3f3a3a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .presentation h1 {

@@ -119,6 +119,34 @@ export class AppComponent {
     };
     this.bullets = [
       {
+        title: "Performance",
+        description: "Miro a creare una soluzione efficiente in termini di velocità di esecuzione.",
+        image: "../assets/placeholders/placeholder_100x100.png"
+      },
+      {
+        title: "Adattamento",
+        description: "Punto a creare una soluzione capace di adattarsi a qualsisi dispositivo.",
+        image: "../assets/placeholders/placeholder_100x100.png"
+      },
+      {
+        title: "Funzionamento",
+        description: "Preferisco creare una soluzione piccola e pronta all'uso, invece di una grande e non funzionante.",
+        image: "../assets/placeholders/placeholder_100x100.png"
+      },
+      {
+        title: "Curiosità",
+        description: "Sono sempre propenso a sperimentare nuovi approcci metodologici.",
+        image: "../assets/placeholders/placeholder_100x100.png"
+      },
+      {
+        title: "Semplicità",
+        description: "\"Keep it simple\".",
+        image: "../assets/placeholders/placeholder_100x100.png"
+      }
+    ];
+    /** 
+    this.bullets = [
+      {
         title: "Veloce",
         description: "Una grande priorità è ottenere i caricamenti rapidi durante le interazioni.",
         image: "../assets/placeholders/placeholder_100x100.png"
@@ -139,6 +167,7 @@ export class AppComponent {
         image: "../assets/placeholders/placeholder_100x100.png"
       }
     ];
+    */
     this.projects = [
       {
         title: "RaiPlay iOS",

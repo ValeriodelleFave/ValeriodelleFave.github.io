@@ -128,11 +128,11 @@ export class AppComponent {
         description: "Punto a creare una soluzione capace di adattarsi a qualsisi dispositivo.",
         image: "../assets/images/bullets/adaptation.png"
       },
-      {
-        title: "Funzionamento",
-        description: "Preferisco creare una soluzione piccola e pronta all'uso, invece di una grande e non funzionante.",
-        image: "../assets/images/bullets/innovation.png"
-      },
+      //{
+      //  title: "Funzionamento",
+      //  description: "Preferisco creare una soluzione piccola e pronta all'uso, invece di una grande e non funzionante.",
+      //  image: "../assets/images/bullets/innovation.png"
+      //},
       {
         title: "Curiosità",
         description: "Sono sempre propenso a sperimentare nuovi approcci metodologici.",

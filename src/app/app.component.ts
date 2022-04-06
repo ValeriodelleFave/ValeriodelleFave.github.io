@@ -121,27 +121,27 @@ export class AppComponent {
       {
         title: "Performance",
         description: "Miro a creare una soluzione efficiente in termini di velocità di esecuzione.",
-        image: "../assets/placeholders/placeholder_100x100.png"
+        image: "../assets/images/bullets/performance.png"
       },
       {
         title: "Adattamento",
         description: "Punto a creare una soluzione capace di adattarsi a qualsisi dispositivo.",
-        image: "../assets/placeholders/placeholder_100x100.png"
+        image: "../assets/images/bullets/adaptation.png"
       },
       {
         title: "Funzionamento",
         description: "Preferisco creare una soluzione piccola e pronta all'uso, invece di una grande e non funzionante.",
-        image: "../assets/placeholders/placeholder_100x100.png"
+        image: "../assets/images/bullets/innovation.png"
       },
       {
         title: "Curiosità",
         description: "Sono sempre propenso a sperimentare nuovi approcci metodologici.",
-        image: "../assets/placeholders/placeholder_100x100.png"
+        image: "../assets/images/bullets/question.png"
       },
       {
         title: "Semplicità",
         description: "\"Keep it simple\".",
-        image: "../assets/placeholders/placeholder_100x100.png"
+        image: "../assets/images/bullets/snap.png"
       }
     ];
     /** 

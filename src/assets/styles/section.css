@@ -8,6 +8,7 @@ section p {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 0 1em;
 }
 
 .bullet img {

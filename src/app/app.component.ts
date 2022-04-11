@@ -114,18 +114,18 @@ export class AppComponent {
     ]
     this.specialBullet = {
       title: "Chi è questo tizio?",
-      description: "Attualmente, sono uno sviluppatore Front-End residente a Roma. Ho una passione per il mondo IT, mi piace fornire soluzioni innovative implementando diverse strategie di ottimizzazione e risoluzione del caso.",
+      description: "Attualmente, sono uno sviluppatore Front-End residente a Roma. Ho una passione per il mondo IT e mi piace sviluppare soluzioni innovative.",
       image: "../assets/images/bullets/me.jpg" // 2:3
     };
     this.bullets = [
       {
         title: "Performance",
-        description: "Miro a creare una soluzione efficiente in termini di velocità di esecuzione.",
+        description: "Monitoraggio e test delle prestazioni.",
         image: "../assets/images/bullets/performance.png"
       },
       {
         title: "Adattamento",
-        description: "Punto a creare una soluzione capace di adattarsi a qualsisi dispositivo.",
+        description: "Visibile su qualsisi dispositivo.",
         image: "../assets/images/bullets/adaptation.png"
       },
       //  {
@@ -135,7 +135,7 @@ export class AppComponent {
       //},
       {
         title: "Curiosità",
-        description: "Sono sempre propenso a sperimentare nuovi approcci metodologici.",
+        description: "Sperimentare nuovi approcci metodologici.",
         image: "../assets/images/bullets/question.png"
       },
       {

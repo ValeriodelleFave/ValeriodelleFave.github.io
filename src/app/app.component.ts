@@ -115,7 +115,7 @@ export class AppComponent {
     this.specialBullet = {
       title: "Chi è questo tizio?",
       description: "Attualmente, sono uno sviluppatore Front-End residente a Roma. Ho una passione per il mondo IT, mi piace fornire soluzioni innovative implementando diverse strategie di ottimizzazione e risoluzione del caso.",
-      image: "../assets/placeholders/placeholder_250x300.png"
+      image: "../assets/images/bullets/me.jpg" // 2:3
     };
     this.bullets = [
       {

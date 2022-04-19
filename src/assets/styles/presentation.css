@@ -13,6 +13,12 @@
     margin-bottom: 1em;
 }
 
+.presentation select {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+}
+
 .bn30 {
   border: 5em;
   cursor: pointer;

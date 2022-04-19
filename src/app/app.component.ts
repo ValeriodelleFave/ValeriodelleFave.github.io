@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import * as it from "../assets/data/it-language.json";
+import * as en from "../assets/data/en-language.json";
+import * as es from "../assets/data/es-language.json";
 
 @Component({
   selector: 'app-root',
@@ -21,37 +24,37 @@ export class AppComponent {
   public languages: any[] = [
     {
       lang: "IT",
+      name: "Italiano",
       content: { }
     },
     {
       lang: "EN",
+      name: "English",
+      content: { }
+    },
+    {
+      lang: "ES",
+      name: "Español",
       content: { }
     },
   ]
-
   public sections: any[] = [
     {
       type: "about",
       title: "About",
       content: [ ]
     },
-    // {
-    //   type: "project",
-    //   title: "Project",
-    //   content: [ ]
-    // },
-    // {
-    //   type: "hobby",
-    //   title: "Hobby",
-    //   content: [ ]
-    // },
     {
       type: "contact",
       title: "Contacts",
       content: [ ]
     }
   ];
-  selectedOption: any;
+  selectedOption = "IT";
+
+  private it = (it as any).default;
+  private en = (en as any).default;
+  private es = (es as any).default;
 
   constructor() { }
 
@@ -62,7 +65,8 @@ export class AppComponent {
 
   setLanguage(language: string) {
     if (language == "IT") this.setItalianLanguage()
-    else this.setEnglishLanguage()
+    else if (language == "EN") this.setEnglishLanguage()
+    else this.setSpanishLanguage()
   }
 
   changeLang() {
@@ -103,341 +107,39 @@ export class AppComponent {
   }
 
   private setItalianLanguage() {
-    this.presentationTitle = "Ciao!<br>Sono <b>Valerio delle Fave</b>."
-    this.menuItems = [
-      {
-        name: "Intro",
-        link: "#presentation",
-        image: "../assets/icons/nav/presentation.png"
-      },
-      {
-        name: "Me",
-        link: "#about",
-        image: "../assets/icons/nav/about.png"
-      },
-      // {
-      //   name: "Projects",
-      //   link: "#project",
-      //   image: "../assets/icons/nav/projects.png"
-      // },
-      // {
-      //   name: "Hobby",
-      //   link: "#hobby",
-      //   image: "../assets/icons/nav/hobbies.png"
-      // },
-      {
-        name: "Contatti",
-        link: "#contact",
-        image: "../assets/icons/nav/contact.png"
-      }
-    ]
-    this.specialBullet = {
-      title: "Chi è questo tizio?",
-      description: "Attualmente, sono uno sviluppatore Front-End residente a Roma. Ho una passione per il mondo IT e mi piace sviluppare soluzioni innovative.",
-      image: "../assets/images/bullets/me.jpg" // 2:3
-    };
-    this.bullets = [
-      {
-        title: "Performance",
-        description: "Monitoraggio e test delle prestazioni.",
-        image: "../assets/images/bullets/performance.png"
-      },
-      {
-        title: "Adattamento",
-        description: "Visibile su qualsiasi dispositivo.",
-        image: "../assets/images/bullets/adaptation.png"
-      },
-      //  {
-      //  title: "Funzionamento",
-      //  description: "Preferisco creare una soluzione piccola e pronta all'uso, invece di una grande e non funzionante.",
-      //  image: "../assets/images/bullets/innovation.png"
-      //},
-      {
-        title: "Curiosità",
-        description: "Sperimentare nuovi approcci metodologici.",
-        image: "../assets/images/bullets/question.png"
-      },
-      {
-        title: "Semplicità",
-        description: "\"Keep it simple\".",
-        image: "../assets/images/bullets/snap.png"
-      }
-    ];
-    /** 
-    this.bullets = [
-      {
-        title: "Veloce",
-        description: "Una grande priorità è ottenere i caricamenti rapidi durante le interazioni.",
-        image: "../assets/placeholders/placeholder_100x100.png"
-      },
-      {
-        title: "Semplice",
-        description: "\"Keep it simple\".",
-        image: "../assets/placeholders/placeholder_100x100.png"
-      },
-      {
-        title: "Dinamico",
-        description: "I vari layouts devono adattarsi a ogni forma, grande o piccola che sia.",
-        image: "../assets/placeholders/placeholder_100x100.png"
-      },
-      {
-        title: "Curioso",
-        description: "Scoprire nuovi approcci metodologici.",
-        image: "../assets/placeholders/placeholder_100x100.png"
-      }
-    ];
-    */
-    this.projects = [
-      {
-        title: "RaiPlay iOS",
-        subtitle: "Sottotitolo",
-        description: "Descrizione molto lunga",
-        languages: [
-          "Programmazione iOS/iPad",
-          "Swift"
-        ],
-        image: "../assets/placeholders/placeholder_200x200.png"
-      },
-      {
-        title: "RAI Front-End",
-        subtitle: "Sottotitolo",
-        description: "Descrizione molto lunga",
-        languages: [
-          "JavaScript",
-          "CSS",
-          "HTML",
-          "XSL",
-          "SQL",
-          "MongoDB"
-        ],
-        image: "../assets/placeholders/placeholder_200x200.png"
-      },
-      {
-        title: "RaiPlay tvOS",
-        subtitle: "Sottotitolo",
-        description: "Descrizione molto lunga",
-        languages: [
-          "Programmazione tvOS",
-          "Swift"
-        ],
-        image: "../assets/placeholders/placeholder_200x200.png"
-      }
-    ];
-    this.hobbies = [
-      {
-        title: "Teatro - Recitazione",
-        image: "../assets/placeholders/placeholder_200x200.png"
-      },
-      {
-        title: "Fitness",
-        image: "../assets/placeholders/placeholder_200x200.png"
-      },
-      {
-        title: "Corsa",
-        image: "../assets/placeholders/placeholder_200x200.png"
-      },
-      {
-        title: "Lettura",
-        image: "../assets/placeholders/placeholder_200x200.png"
-      }
-    ];
-    this.contacts = [
-      {
-        type: "Email",
-        url: "mailto:valerio.dellefave00@gmail.com",
-        icon: "../assets/icons/social/email.png"
-      },
-      {
-        type: "Facebook",
-        url: "https://www.facebook.com/valerio.dellefave",
-        icon: "../assets/icons/social/facebook.png"
-      },
-      {
-        type: "GitHub",
-        url: "https://github.com/ValeriodelleFave",
-        icon: "../assets/icons/social/github.png"
-      },
-      {
-        type: "Instagram",
-        url: "https://www.instagram.com/valerio_dellefave",
-        icon: "../assets/icons/social/instagram.png"
-      },
-      {
-        type: "LinkedIn",
-        url: "https://www.linkedin.com/in/valerio-delle-fave",
-        icon: "../assets/icons/social/linkedin.png"
-      },
-    ];
-    this.copyrightText = "Copyright © Valerio delle Fave. All Rights Reserved.";
+    this.presentationTitle = this.it.presentationTitle;
+    this.menuItems = this.it.menuItems;
+    this.sections = this.it.sections;
+    this.specialBullet = this.it.specialBullet;
+    this.bullets = this.it.bullets;
+    this.projects = this.it.projects;
+    this.hobbies = this.it.hobbies;
+    this.contacts = this.it.contacts;
+    this.copyrightText = this.it.copyrightText;
   }
 
   private setEnglishLanguage() {
-    this.presentationTitle = "Hi!<br>I'm <b>Valerio delle Fave</b>."
-    this.menuItems = [
-      {
-        name: "Intro",
-        link: "#presentation",
-        image: "../assets/icons/nav/presentation.png"
-      },
-      {
-        name: "About",
-        link: "#about",
-        image: "../assets/icons/nav/about.png"
-      },
-      // {
-      //   name: "Projects",
-      //   link: "#project",
-      //   image: "../assets/icons/nav/projects.png"
-      // },
-      // {
-      //   name: "Hobby",
-      //   link: "#hobby",
-      //   image: "../assets/icons/nav/hobbies.png"
-      // },
-      {
-        name: "Contacts",
-        link: "#contact",
-        image: "../assets/icons/nav/contact.png"
-      }
-    ]
-    this.specialBullet = {
-      title: "Who is this guy?",
-      description: "Currently, I am a Front-End developer based in Rome. I have a passion for the IT world and I like developing innovative solutions.",
-      image: "../assets/images/bullets/me.jpg" // 2:3
-    };
-    this.bullets = [
-      {
-        title: "Performance",
-        description: "Performance monitoring and testing.",
-        image: "../assets/images/bullets/performance.png"
-      },
-      {
-        title: "Adaptation",
-        description: "Visible on any device.",
-        image: "../assets/images/bullets/adaptation.png"
-      },
-      //  {
-      //  title: "Funzionamento",
-      //  description: "Preferisco creare una soluzione piccola e pronta all'uso, invece di una grande e non funzionante.",
-      //  image: "../assets/images/bullets/innovation.png"
-      //},
-      {
-        title: "Curiosity",
-        description: "Experiment with new methodological approaches.",
-        image: "../assets/images/bullets/question.png"
-      },
-      {
-        title: "Simplicity",
-        description: "\"Keep it simple\".",
-        image: "../assets/images/bullets/snap.png"
-      }
-    ];
-    /** 
-    this.bullets = [
-      {
-        title: "Veloce",
-        description: "Una grande priorità è ottenere i caricamenti rapidi durante le interazioni.",
-        image: "../assets/placeholders/placeholder_100x100.png"
-      },
-      {
-        title: "Semplice",
-        description: "\"Keep it simple\".",
-        image: "../assets/placeholders/placeholder_100x100.png"
-      },
-      {
-        title: "Dinamico",
-        description: "I vari layouts devono adattarsi a ogni forma, grande o piccola che sia.",
-        image: "../assets/placeholders/placeholder_100x100.png"
-      },
-      {
-        title: "Curioso",
-        description: "Scoprire nuovi approcci metodologici.",
-        image: "../assets/placeholders/placeholder_100x100.png"
-      }
-    ];
-    */
-    this.projects = [
-      {
-        title: "RaiPlay iOS",
-        subtitle: "Sottotitolo",
-        description: "Descrizione molto lunga",
-        languages: [
-          "Programmazione iOS/iPad",
-          "Swift"
-        ],
-        image: "../assets/placeholders/placeholder_200x200.png"
-      },
-      {
-        title: "RAI Front-End",
-        subtitle: "Sottotitolo",
-        description: "Descrizione molto lunga",
-        languages: [
-          "JavaScript",
-          "CSS",
-          "HTML",
-          "XSL",
-          "SQL",
-          "MongoDB"
-        ],
-        image: "../assets/placeholders/placeholder_200x200.png"
-      },
-      {
-        title: "RaiPlay tvOS",
-        subtitle: "Sottotitolo",
-        description: "Descrizione molto lunga",
-        languages: [
-          "Programmazione tvOS",
-          "Swift"
-        ],
-        image: "../assets/placeholders/placeholder_200x200.png"
-      }
-    ];
-    this.hobbies = [
-      {
-        title: "Teatro - Recitazione",
-        image: "../assets/placeholders/placeholder_200x200.png"
-      },
-      {
-        title: "Fitness",
-        image: "../assets/placeholders/placeholder_200x200.png"
-      },
-      {
-        title: "Corsa",
-        image: "../assets/placeholders/placeholder_200x200.png"
-      },
-      {
-        title: "Lettura",
-        image: "../assets/placeholders/placeholder_200x200.png"
-      }
-    ];
-    this.contacts = [
-      {
-        type: "Email",
-        url: "mailto:valerio.dellefave00@gmail.com",
-        icon: "../assets/icons/social/email.png"
-      },
-      {
-        type: "Facebook",
-        url: "https://www.facebook.com/valerio.dellefave",
-        icon: "../assets/icons/social/facebook.png"
-      },
-      {
-        type: "GitHub",
-        url: "https://github.com/ValeriodelleFave",
-        icon: "../assets/icons/social/github.png"
-      },
-      {
-        type: "Instagram",
-        url: "https://www.instagram.com/valerio_dellefave",
-        icon: "../assets/icons/social/instagram.png"
-      },
-      {
-        type: "LinkedIn",
-        url: "https://www.linkedin.com/in/valerio-delle-fave",
-        icon: "../assets/icons/social/linkedin.png"
-      },
-    ];
-    this.copyrightText = "Copyright © Valerio delle Fave. All Rights Reserved.";
+    this.presentationTitle = this.en.presentationTitle;
+    this.menuItems = this.en.menuItems;
+    this.sections = this.en.sections;
+    this.specialBullet = this.en.specialBullet;
+    this.bullets = this.en.bullets;
+    this.projects = this.en.projects;
+    this.hobbies = this.en.hobbies;
+    this.contacts = this.en.contacts;
+    this.copyrightText = this.en.copyrightText;
+  }
+
+  private setSpanishLanguage() {
+    this.presentationTitle = this.es.presentationTitle;
+    this.menuItems = this.es.menuItems;
+    this.sections = this.es.sections;
+    this.specialBullet = this.es.specialBullet;
+    this.bullets = this.es.bullets;
+    this.projects = this.es.projects;
+    this.hobbies = this.es.hobbies;
+    this.contacts = this.es.contacts;
+    this.copyrightText = this.es.copyrightText;
   }
 
 }

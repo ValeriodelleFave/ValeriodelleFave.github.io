@@ -1,10 +1,14 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .contact {
-    width: 75px;
-    height: 75px;
     color: #353c4a;
     border: .125rem solid #f3f3f3;
     box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
-    border-radius: 50%;
+    border-radius: 25%;
     transition: 250ms;
 }
 
@@ -14,11 +18,9 @@
 }
 
 .contact a img {
-    border-radius: 50%;
-}
-
-.contacts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+    aspect-ratio: 1/1;
+    border-radius: 25%;
+    max-width: 75px;
+    max-height: 75px;
+    width: 100%;
 }

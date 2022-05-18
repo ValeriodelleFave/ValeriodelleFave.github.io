@@ -44,6 +44,11 @@ export class AppComponent {
       title: "About",
       content: [ ]
     },
+    { //inserire le sezioni nel json
+      type: "color-wheel",
+      title: "Color wheel",
+      content: [ ]
+    },
     {
       type: "contact",
       title: "Contacts",
@@ -147,5 +152,6 @@ export class AppComponent {
 enum Types {
   About = "about",
   Project = "project",
-  Hobby = "hobby"
+  Hobby = "hobby",
+  ColoursWheel = "color-wheel"
 }

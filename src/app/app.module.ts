@@ -1,3 +1,4 @@
+import { ColorWheelComponent } from './../components/color-wheel/color-wheel.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,7 +12,8 @@ import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ColorWheelComponent
   ],
   imports: [
     BrowserModule,

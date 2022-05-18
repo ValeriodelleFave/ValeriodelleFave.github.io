@@ -80,6 +80,12 @@
     </div>
   </ng-container>
 
+  <ng-container *ngIf="section.type == 'color-wheel'">
+    <div class="col-md-12 container">
+      <app-color-wheel></app-color-wheel>
+    </div>
+  </ng-container>
+
   <ng-container *ngIf="section.type == 'contact'">
     <div class="col-md-10 offset-md-1" class="contacts">
       <figure *ngFor="let contact of contacts" class="contact">

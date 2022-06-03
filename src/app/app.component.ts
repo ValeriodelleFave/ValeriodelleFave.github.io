@@ -1,3 +1,4 @@
+import { NetworkManager } from './../services/networkManager';
 import { Component } from '@angular/core';
 import * as it from "../assets/data/it-language.json";
 import * as en from "../assets/data/en-language.json";
@@ -61,10 +62,14 @@ export class AppComponent {
   private en = (en as any).default;
   private es = (es as any).default;
 
-  constructor() { }
+  constructor(private networkManager: NetworkManager) { }
 
   ngOnInit() {
     this.setSkills();
+
+    let a = this.networkManager.get("https://my-endpoints.herokuapp.com/match");
+
+    debugger
     this.setItalianLanguage();
   }
 

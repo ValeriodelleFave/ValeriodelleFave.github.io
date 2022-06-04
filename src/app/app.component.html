@@ -1,6 +1,6 @@
 <section class="presentation" id="presentation">
   <select *ngIf="languages.length > 1" [(ngModel)]="selectedOption" (change)="changeLang()">
-    <option *ngFor="let language of languages" [ngValue]="language.lang">{{language.lang}}</option>
+    <option *ngFor="let language of languages" [ngValue]="language.lang">{{language.name}}</option>
   </select>
   <h1 [innerHTML]="presentationTitle" class="centered-text"></h1>
   <a href="#about"><button class="bn30">Iniziamo!</button></a>
@@ -77,6 +77,12 @@
           <figcaption>{{hobby.title}}</figcaption>
         </div>
       </figure>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="section.type == 'color-wheel'">
+    <div class="col-md-12 container">
+      <app-color-wheel></app-color-wheel>
     </div>
   </ng-container>
 

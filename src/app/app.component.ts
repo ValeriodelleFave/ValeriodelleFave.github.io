@@ -67,9 +67,12 @@ export class AppComponent {
   ngOnInit() {
     this.setSkills();
 
-    let a = this.networkManager.get("https://my-endpoints.herokuapp.com/match");
+    this.networkManager.get("https://my-endpoints.herokuapp.com/match").subscribe(res => {
+      let a = res;
+      debugger
 
-    debugger
+    });
+
     this.setItalianLanguage();
   }
 

@@ -13,8 +13,8 @@ export class NetworkManager {
 
   constructor(private http: HttpClient) { }
 
-  get(url: string) {
-    return this.http.get(url, this.httpOptions);
+  get<T>(url: string, options?: {[key: string] : string}) {
+    return this.http.get<T>(url, {params: options});
   }
 
 }

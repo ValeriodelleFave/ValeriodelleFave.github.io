@@ -1,3 +1,5 @@
+import { Contact } from './../models/contact.model';
+import { Skill } from './../models/skill.model';
 import { Language } from './../models/language.model';
 import { NetworkManager } from './../services/networkManager';
 import { Component } from '@angular/core';
@@ -59,8 +61,9 @@ export class AppComponent {
   constructor(private networkManager: NetworkManager) { }
 
   ngOnInit() {
-    this.setSkills();
     this.setLanguage("IT");
+    this.setSkills();
+    this.setContacts();
   }
 
   setLanguage(language: string) {
@@ -82,36 +85,15 @@ export class AppComponent {
   }
 
   private setSkills() {
-    this.skills = [
-      {
-        name: "JavaScript",
-        value: 80
-      },
-      {
-        name: "CSS",
-        value: 80
-      },
-      {
-        name: "Swift",
-        value: 50
-      },
-      {
-        name: "HTML",
-        value: 90
-      },
-      {
-        name: "Node.js",
-        value: 60
-      },
-      {
-        name: "MongoDB",
-        value: 40
-      },
-      {
-        name: "SQL",
-        value: 40
-      }
-    ];
+    this.networkManager.get<Skill[]>("https://localhost:3000/skills").subscribe(res => {
+      this.skills = res;
+    });
+  }
+
+  private setContacts() {
+    this.networkManager.get<Contact[]>("https://localhost:3000/contacts").subscribe(res => {
+      this.contacts = res;
+    });
   }
 
 }

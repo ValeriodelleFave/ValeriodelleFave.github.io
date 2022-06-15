@@ -11,62 +11,47 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public presentationTitle: string = "";
-  public menuItems: any[] = [];
-  public specialBullet: any;
   public bullets: any[] = [];
-  public skills: any[] = [];
-  public projects: any[] = [];
-  public hobbies: any[] = [];
+  public certifications: any[] = [];
   public contacts: any[] = [];
   public copyrightText: string = "";
-  public certifications: any[] = [];
   public graduates: any[] = [];
+  public hobbies: any[] = [];
   public languages: any[] = [
     {
       lang: "IT",
-      name: "Italiano",
-      content: {}
+      name: "Italiano"
     },
     {
       lang: "EN",
-      name: "English",
-      content: {}
+      name: "English"
     },
     {
       lang: "ES",
-      name: "Español",
-      content: {}
-    },
-  ]
-  public sections: any[] = [
-    {
-      type: "about",
-      title: "About",
-      content: []
-    },
-    { //inserire le sezioni nel json
-      type: "color-wheel",
-      title: "Color wheel",
-      content: []
-    },
-    {
-      type: "contact",
-      title: "Contacts",
-      content: []
+      name: "Español"
     }
   ];
-  selectedOption = "IT";
+  public menuItems: any[] = [];
+  public presentationTitle: string = "";
+  public projects: any[] = [];
+  public selectedOption = "IT";
+  public sections: any[] = [];
+  public skills: any[] = [];
+  public specialBullet: any;
 
   constructor(private networkManager: NetworkManager) { }
 
   ngOnInit() {
-    this.setLanguage("IT");
+    this.setLanguage(this.selectedOption);
     this.setSkills();
     this.setContacts();
   }
 
-  setLanguage(language: string) {
+  changeLang() {
+    this.setLanguage(this.selectedOption);
+  }
+
+  private setLanguage(language: string) {
     this.networkManager.get<Language>("language", { language: language }).subscribe(res => {
       this.presentationTitle = res?.presentationTitle;
       this.menuItems = res?.menuItems;
@@ -77,10 +62,6 @@ export class AppComponent {
       this.hobbies = res?.hobbies;
       this.copyrightText = res?.copyrightText;
     });
-  }
-
-  changeLang() {
-    this.setLanguage(this.selectedOption)
   }
 
   private setSkills() {
@@ -95,11 +76,4 @@ export class AppComponent {
     });
   }
 
-}
-
-enum Types {
-  About = "about",
-  Project = "project",
-  Hobby = "hobby",
-  ColoursWheel = "color-wheel"
 }

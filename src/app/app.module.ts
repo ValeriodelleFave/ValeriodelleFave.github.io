@@ -11,19 +11,18 @@ import { FormsModule } from "@angular/forms";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from "@angular/material/list";
 import { MatCardModule } from "@angular/material/card";
+import { SplashScreenComponent } from 'src/components/splash/splash-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ColorWheelComponent
+    ColorWheelComponent,
+    SplashScreenComponent
   ],
   imports: [
     BrowserModule,
-
     AppRoutingModule,
-
-   HttpClientModule,
-
+    HttpClientModule,
     FlexLayoutModule,
     MatListModule,
     MatCardModule,

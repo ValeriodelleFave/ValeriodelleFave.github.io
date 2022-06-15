@@ -13,7 +13,7 @@ export class NetworkManager {
   get<T>(url: Url, options?: { [key: string]: string }) {
     let devUrl = "http://localhost:3000/" + url;
     let prodUrl = "https://my-endpoints.herokuapp.com/" + url;
-    return this.http.get<T>(devUrl, { params: options });
+    return this.http.get<T>(prodUrl, { params: options });
   }
 
 }

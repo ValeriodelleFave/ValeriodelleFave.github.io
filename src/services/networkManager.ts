@@ -1,8 +1,5 @@
-import { Language } from './../models/language.model';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
 
 @Injectable()
 export class NetworkManager {
@@ -13,8 +10,15 @@ export class NetworkManager {
 
   constructor(private http: HttpClient) { }
 
-  get<T>(url: string, options?: {[key: string] : string}) {
-    return this.http.get<T>(url, {params: options});
+  get<T>(url: Url, options?: { [key: string]: string }) {
+    let devUrl = "http://localhost:3000/" + url;
+    let prodUrl = "https://my-endpoints.herokuapp.com/" + url;
+    return this.http.get<T>(devUrl, { params: options });
   }
 
 }
+
+export type Url = ""
+  | "language"
+  | "skills"
+  | "contacts"

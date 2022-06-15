@@ -26,34 +26,34 @@ export class AppComponent {
     {
       lang: "IT",
       name: "Italiano",
-      content: { }
+      content: {}
     },
     {
       lang: "EN",
       name: "English",
-      content: { }
+      content: {}
     },
     {
       lang: "ES",
       name: "Español",
-      content: { }
+      content: {}
     },
   ]
   public sections: any[] = [
     {
       type: "about",
       title: "About",
-      content: [ ]
+      content: []
     },
     { //inserire le sezioni nel json
       type: "color-wheel",
       title: "Color wheel",
-      content: [ ]
+      content: []
     },
     {
       type: "contact",
       title: "Contacts",
-      content: [ ]
+      content: []
     }
   ];
   selectedOption = "IT";
@@ -67,7 +67,7 @@ export class AppComponent {
   }
 
   setLanguage(language: string) {
-    this.networkManager.get<Language>("https://my-endpoints.herokuapp.com/language", { language: language }).subscribe(res => {
+    this.networkManager.get<Language>("language", { language: language }).subscribe(res => {
       this.presentationTitle = res?.presentationTitle;
       this.menuItems = res?.menuItems;
       this.sections = res?.sections;
@@ -75,7 +75,6 @@ export class AppComponent {
       this.bullets = res?.bullets;
       this.projects = res?.projects;
       this.hobbies = res?.hobbies;
-      this.contacts = res?.contacts;
       this.copyrightText = res?.copyrightText;
     });
   }
@@ -85,13 +84,13 @@ export class AppComponent {
   }
 
   private setSkills() {
-    this.networkManager.get<Skill[]>("https://localhost:3000/skills").subscribe(res => {
+    this.networkManager.get<Skill[]>("skills").subscribe(res => {
       this.skills = res;
     });
   }
 
   private setContacts() {
-    this.networkManager.get<Contact[]>("https://localhost:3000/contacts").subscribe(res => {
+    this.networkManager.get<Contact[]>("contacts").subscribe(res => {
       this.contacts = res;
     });
   }

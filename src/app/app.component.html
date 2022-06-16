@@ -1,4 +1,4 @@
-<splash-screen></splash-screen>
+<splash-screen [showSplash]="showSplash"></splash-screen>
 
 <section class="presentation" id="presentation">
   <select *ngIf="languages.length > 1" [(ngModel)]="selectedOption" (change)="changeLang()">
@@ -63,7 +63,8 @@
   <ng-container *ngIf="section.type == 'project'">
     <div class="col-md-12 container">
       <figure *ngFor="let project of projects" class="square view overlay">
-        <img alt="{{project.title}} project" class="img-fluid" loading="lazy" src="{{project.image}}" title="{{project.title}}">
+        <img alt="{{project.title}} project" class="img-fluid" loading="lazy" src="{{project.image}}"
+          title="{{project.title}}">
         <div class="mask flex-center rgba-red-strong white-text column-direction">
           <figcaption *ngFor="let language of project.languages">{{language}}</figcaption>
         </div>
@@ -92,7 +93,8 @@
     <div class="col-md-10 offset-md-1" class="contacts">
       <figure *ngFor="let contact of contacts" class="contact">
         <a href="{{contact.url}}" title="Send me a mail">
-          <img alt="{{contact.type}}" class="img-fluid" loading="lazy" src="{{contact.icon}}" srcset="" title="{{contact.type}}">
+          <img alt="{{contact.type}}" class="img-fluid" loading="lazy" src="{{contact.icon}}" srcset=""
+            title="{{contact.type}}">
         </a>
       </figure>
     </div>

@@ -11,12 +11,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public bullets: any[] = [];
-  public certifications: any[] = [];
-  public contacts: any[] = [];
-  public copyrightText: string = "";
-  public graduates: any[] = [];
-  public hobbies: any[] = [];
+  public bullets: any[];
+  public certifications: any[];
+  public contacts: any[];
+  public copyrightText: string;
+  public graduates: any[];
+  public hobbies: any[];
   public languages: any[] = [
     {
       lang: "IT",
@@ -31,12 +31,13 @@ export class AppComponent {
       name: "Español"
     }
   ];
-  public menuItems: any[] = [];
-  public presentationTitle: string = "";
-  public projects: any[] = [];
+  public menuItems: any[];
+  public presentationTitle: string;
+  public projects: any[];
   public selectedOption = "IT";
-  public sections: any[] = [];
-  public skills: any[] = [];
+  public sections: any[];
+  public showSplash: boolean;
+  public skills: any[];
   public specialBullet: any;
 
   constructor(private networkManager: NetworkManager) { }
@@ -61,6 +62,7 @@ export class AppComponent {
       this.projects = res?.projects;
       this.hobbies = res?.hobbies;
       this.copyrightText = res?.copyrightText;
+      this.showSplash = true;
     });
   }
 

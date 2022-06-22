@@ -36,7 +36,7 @@ export class AppComponent {
   public projects: any[];
   public selectedOption = "IT";
   public sections: any[];
-  public showSplash: boolean;
+  public isSplashHidden: boolean;
   public skills: any[];
   public specialBullet: any;
 
@@ -62,7 +62,7 @@ export class AppComponent {
       this.projects = res?.projects;
       this.hobbies = res?.hobbies;
       this.copyrightText = res?.copyrightText;
-      this.showSplash = true;
+      this.isSplashHidden = true;
     });
   }
 

@@ -11,14 +11,15 @@ export class NetworkManager {
   constructor(private http: HttpClient) { }
 
   get<T>(url: Url, options?: { [key: string]: string }) {
-    let devUrl = "http://localhost:3000/" + url;
-    let prodUrl = "https://my-endpoints.herokuapp.com/" + url;
-    return this.http.get<T>(prodUrl, { params: options });
+    let devUrl = "http://localhost:3000/portfolio/" + url;
+    let prodUrl = "https://my-endpoints.herokuapp.com/portfolio/" + url;
+    return this.http.get<T>(devUrl, { params: options });
   }
 
 }
 
 export type Url = ""
   | "language"
+  | "languages"
   | "skills"
   | "contacts"

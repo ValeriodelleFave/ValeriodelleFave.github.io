@@ -7,15 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SplashScreenComponent implements OnInit {
 
-  @Input() showSplash: boolean;
+  @Input() isSplashHidden: boolean = false;
   windowWidth: string;
 
   constructor() { }
 
   ngOnInit(): void {
-    setTimeout(() => {
+    if (this.isSplashHidden) {
       this.windowWidth = "-" + window.innerWidth + "px";
-    }, 2500);
+    }
   }
 
 

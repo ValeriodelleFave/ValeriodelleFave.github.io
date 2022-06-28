@@ -17,33 +17,21 @@ export class AppComponent {
   public copyrightText: string;
   public graduates: any[];
   public hobbies: any[];
-  public languages: any[] = [
-    {
-      lang: "IT",
-      name: "Italiano"
-    },
-    {
-      lang: "EN",
-      name: "English"
-    },
-    {
-      lang: "ES",
-      name: "Español"
-    }
-  ];
+  public languages: any[];
   public menuItems: any[];
   public presentationTitle: string;
   public projects: any[];
-  public selectedOption = "IT";
+  public selectedOption: string;
   public sections: any[];
-  public showSplash: boolean;
+  public isSplashHidden: boolean;
   public skills: any[];
   public specialBullet: any;
 
   constructor(private networkManager: NetworkManager) { }
 
   ngOnInit() {
-    this.setLanguage(this.selectedOption);
+    this.getLanguages();
+    this.setLanguage();
     this.setSkills();
     this.setContacts();
   }
@@ -52,20 +40,27 @@ export class AppComponent {
     this.setLanguage(this.selectedOption);
   }
 
-  private setLanguage(language: string) {
-    this.networkManager.get<Language>("language", { language: language }).subscribe(res => {
-      this.presentationTitle = res?.presentationTitle;
-      this.menuItems = res?.menuItems;
-      this.sections = res?.sections;
-      this.specialBullet = res?.specialBullet;
-      this.bullets = res?.bullets;
-      this.projects = res?.projects;
-      this.hobbies = res?.hobbies;
-      this.copyrightText = res?.copyrightText;
-      this.showSplash = true;
+  private setLanguage(language?: string) {
+    this.networkManager.get<Language>("language", { language: language || window.navigator.language }).subscribe(res => {
+      debugger
+      this.selectedOption = res?.language;
+      this.presentationTitle = res?.data?.presentationTitle;
+      this.menuItems = res?.data?.menuItems;
+      this.sections = res?.data?.sections;
+      this.specialBullet = res?.data?.specialBullet;
+      this.bullets = res?.data?.bullets;
+      this.projects = res?.data?.projects;
+      this.hobbies = res?.data?.hobbies;
+      this.copyrightText = res?.data?.copyrightText;
+      this.isSplashHidden = true;
     });
   }
 
+  private getLanguages() {
+    this.networkManager.get<any[]>("languages").subscribe(res => {
+      this.languages = res;
+    });
+  }
   private setSkills() {
     this.networkManager.get<Skill[]>("skills").subscribe(res => {
       this.skills = res;

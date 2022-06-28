@@ -21,7 +21,7 @@ export class AppComponent {
   public menuItems: any[];
   public presentationTitle: string;
   public projects: any[];
-  public selectedOption = "IT";
+  public selectedOption: string;
   public sections: any[];
   public isSplashHidden: boolean;
   public skills: any[];
@@ -31,7 +31,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.getLanguages();
-    this.setLanguage(this.selectedOption);
+    this.setLanguage();
     this.setSkills();
     this.setContacts();
   }
@@ -40,8 +40,8 @@ export class AppComponent {
     this.setLanguage(this.selectedOption);
   }
 
-  private setLanguage(language: string) {
-    this.networkManager.get<Language>("language", { language: window.navigator.language }).subscribe(res => {
+  private setLanguage(language?: string) {
+    this.networkManager.get<Language>("language", { language: language || window.navigator.language }).subscribe(res => {
       debugger
       this.selectedOption = res?.language;
       this.presentationTitle = res?.data?.presentationTitle;

@@ -1,9 +1,11 @@
 <splash-screen [isSplashHidden]="isSplashHidden"></splash-screen>
 
 <section *ngIf="presentationTitle" class="presentation" id="presentation">
-  <select *ngIf="languages.length > 1" [(ngModel)]="selectedOption" (change)="changeLang()">
+  
+  <select [(ngModel)]="selectedOption" (change)="changeLang()">
     <option *ngFor="let language of languages" [ngValue]="language.lang">{{language.name}}</option>
   </select>
+
   <h1 [innerHTML]="presentationTitle" class="centered-text"></h1>
   <a href="#about"><button class="bn30">Iniziamo!</button></a>
 </section>

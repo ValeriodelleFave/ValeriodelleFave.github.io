@@ -42,7 +42,6 @@ export class AppComponent {
 
   private setLanguage(language?: string) {
     this.networkManager.get<Language>("language", { language: language || window.navigator.language }).subscribe(res => {
-      debugger
       this.selectedOption = res?.language;
       this.presentationTitle = res?.data?.presentationTitle;
       this.menuItems = res?.data?.menuItems;
@@ -61,6 +60,7 @@ export class AppComponent {
       this.languages = res;
     });
   }
+
   private setSkills() {
     this.networkManager.get<Skill[]>("skills").subscribe(res => {
       this.skills = res;

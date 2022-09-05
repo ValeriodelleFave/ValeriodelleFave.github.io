@@ -1,5 +1,9 @@
-<map name="primary">
+<!-- <map name="primary">
   <area shape="circle" coords="75,75,75" href="https://www.google.it" alt="Click to go Left">
   <area shape="circle" coords="275,75,75" href="https://www.microsoft.it" alt="Click to go Right">
 </map>
-<img usemap="#primary" src="https://via.placeholder.com/350x150" alt="350 x 150 pic">
+<img usemap="#primary" src="https://via.placeholder.com/350x150" alt="350 x 150 pic"> -->
+
+<div class="colors-container">
+  <div class="color" *ngFor="let color of allColors" [style.background-color]="color.style" (onclick)="showColor($event)"></div>
+</div>

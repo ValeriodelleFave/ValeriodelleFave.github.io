@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColorWheelComponent implements OnInit {
 
-  constructor() { }
-
   primaryColors: any[] =   [];
   secondaryColors: any[] = [];
   tertiaryColors: any[] =  [];
@@ -18,7 +16,7 @@ export class ColorWheelComponent implements OnInit {
 
   rules = {
     monocromatici: "insieme diverse sfumature dello stesso colore",
-    analoghi: " Colori analoghi sono quelli che contengono un colore comune, e si trovano uno accanto all'altro sulla ruota,",
+    analoghi: "Colori analoghi sono quelli che contengono un colore comune, e si trovano uno accanto all'altro sulla ruota,",
     analoghi_ampliati: "comprende lo stesso schema di colori analoghi e si estende alla gamma di colori vicini. ",
     complementari: "Si scelgono colori opposti sul cerchio cromatico",
     complementari_equidistanti: "L’importante in questo tipo di abbinamento è che i colori abbiano lo stesso valore tonale, o tutti e tre tenui o tutti e tre brillanti.",
@@ -27,55 +25,73 @@ export class ColorWheelComponent implements OnInit {
 
   allColors = [
     {
+      id: 1,
       name: "giallo",
       style: "#FFFF00"
     },
     {
+      id: 2,
       name: "giallo arancione",
       style: "#FFAE42"
     },
     {
+      id: 3,
       name: "arancione",
       style: "#FFA500"
     },
     {
+      id: 4,
       name: "rosso arancione",
       style: "#FF5349"
     },
     {
+      id: 5,
       name: "rosso",
       style: "#FF0000"
     },
     {
+      id: 6,
       name: "rosso viola",
       style: "#F75394"
     },
     {
+      id: 7,
       name: "viola",
       style: "#8F00FF"
     },
     {
+      id: 8,
       name: "blu viola",
       style: "#8A2BE2"
     },
     {
+      id: 9,
       name: "blu",
       style: "#0000FF"
     },
     {
+      id: 10,
       name: "blu verde",
       style: "#0D98BA"
     },
     {
+      id: 11,
       name: "verde",
       style: "#00FF00"
     },
     {
+      id: 12,
       name: "verde giallo",
       style: "#ADFF2F"
     }
   ]
 
+  selectedColor = {
+    title: "title",
+    description: "description",
+  };
+
+  constructor() { }
 
   ngOnInit(): void {
     for (let i = 0; i < this.allColors.length; i++) {
@@ -94,6 +110,7 @@ export class ColorWheelComponent implements OnInit {
 
   showColor(el: any) {
     debugger
+    this.selectedColor = el
     console.log(el)
   }
 

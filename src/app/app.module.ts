@@ -1,3 +1,4 @@
+import { DetailComponent } from './../components/detail/detail.component';
 import { NetworkManager } from './../services/networkManager';
 import { ColorWheelComponent } from './../components/color-wheel/color-wheel.component';
 import { NgModule } from '@angular/core';
@@ -12,12 +13,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from "@angular/material/list";
 import { MatCardModule } from "@angular/material/card";
 import { SplashScreenComponent } from 'src/components/splash/splash-screen.component';
+import { MatDialogModule } from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
     AppComponent,
     ColorWheelComponent,
-    SplashScreenComponent
+    SplashScreenComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import { SplashScreenComponent } from 'src/components/splash/splash-screen.compo
     FlexLayoutModule,
     MatListModule,
     MatCardModule,
+    MatDialogModule,
     FormsModule
   ],
   providers: [

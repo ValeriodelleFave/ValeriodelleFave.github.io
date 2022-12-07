@@ -7,7 +7,7 @@ export class Constants {
     }
 
     private prod = {
-        url: "https://my-endpoints.herokuapp.com/portfolio/"
+        url: "https://my-endpoints.onrender.com/portfolio/"
     }
 
     baseUrl: string = this.prod.url;
